@@ -1,0 +1,44 @@
+.aboutSection {
+    padding: 120px 0px;
+}
+
+.about {
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    background-color: #ffff;
+    box-shadow: 0 0 40px 5px rgb(0 0 0/5%);
+    transition: all .5s ease-in-out;
+    padding-bottom: 60px;
+}
+
+.about:hover {
+    transform: translateY(-10px);
+}
+
+.iconAbout {
+    width: 70px;
+    margin-bottom: 30px;
+    transition: all .5s ease-in-out;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+@media(max-width:990px) {
+    .iconAbout {
+        margin: 0!important;
+        margin-left: 20px!important;
+    }   
+}
+
+.textAbout h4 {
+    font-size: 22px;
+    color: #0f4229;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.textAbout p {
+    font-size: 16px;
+    color: #191f30;
+}

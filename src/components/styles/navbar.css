@@ -1,0 +1,26 @@
+/* NavBar */
+
+.imgLogo {
+    height: 80px;
+    margin-right: 20px;
+}
+
+.navbar {
+    padding: 26px !important;
+    background-color: var(--footerColor);
+    border-bottom: 1px solid black;
+}
+
+.navbar-nav {
+    font-size: 25px;
+    color: var(--fontColor);
+    font-weight: 400 !important;
+    justify-content: space-between !important;
+    width: 90% !important;
+}
+
+.navbar-head {
+    position: fixed!important;
+    width: 100%;
+    z-index: 1000;
+}

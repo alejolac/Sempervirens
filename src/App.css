@@ -1,0 +1,419 @@
+:root {
+  --colorPrimary: #8FC74B;
+  --colorSecondary: #00B96B;
+  --footerColor: #E1EDE5;
+  --font: font-family: 'Montserrat', sans-serif;
+  --fontColor: #333;
+  --fontColorLight: #fff;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--fontColor);
+}
+
+img {
+  max-width: 100%;
+}
+
+.titulo-seccion h2 {
+  font-family: 'Fira Code', monospace !important;
+}
+
+.linea {
+  background-color: var(--colorSecondary);
+}
+
+@media (max-width: 400px) {
+  body {
+    max-width: 99%;
+  }
+}
+
+.dn {
+  visibility: hidden;
+}
+
+.pt-60 {
+  padding-top: 120px;
+}
+
+.pt-120 {
+  padding-top: 180px !important;
+  ;
+}
+
+/* Home */
+
+.containerBackground {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.imgFondo {
+  width: 100%;
+  height: 620px;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.imgFondo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(15, 66, 41, .7);
+  z-index: -1;
+}
+
+.containtMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: white;
+}
+
+.containtMain h5 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.containtMain h1 {
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.containtMain p {
+  font-size: 18px;
+}
+
+@media (max-width: 368px) {
+  .containtMain p {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .productCard {
+    margin: 0 !important;
+  }
+}
+
+.btn-main {
+  width: 120px !important;
+  height: 45px;
+  font-size: 22px !important;
+}
+
+
+/* Productos destacados */
+
+.featuredHR {
+  width: 380px;
+  margin: 0 auto;
+  color: var(--grennColor);
+  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.productFeat:hover {
+  transform: scale(1.04)
+}
+
+.productFeat img {
+  width: 100%;
+}
+
+.productFeat h5 {
+  font-size: 22px;
+}
+
+.featureLinkCard {
+  text-decoration: none;
+  color: black;
+}
+
+.card-body p {
+  font-size: 17px;
+}
+
+.card-body span {
+  color: var(--grennColor);
+  font-size: 20px;
+}
+
+.featureLinkCard:hover {
+  color: black;
+}
+
+.btnViewAll {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.btnViewAll button {
+  width: 120px;
+  height: 42px !important;
+}
+
+@media (max-width: 1000px) {
+  .btnViewAll button {
+    width: 280px;
+  }
+
+  .btnViewAll {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
+.title {
+  color: var(--grennColor);
+  font-size: 30px !important;
+  font-weight: 600;
+}
+
+.featuredCommon {
+  padding-top: 60px;
+}
+
+.infoMore {
+  display: flex;
+  justify-content: center;
+}
+
+
+.pt60 {
+  padding-top: 50px;
+}
+
+/* Categories featured */
+
+.backgroundFeatured {
+  padding: 50px 0;
+}
+
+
+.titleFeatured,
+.imgTitleFeatured {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 300px !important;
+}
+
+.categoryIndividual {
+  background-color: white;
+  padding: 20px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.categoryIndividual:hover {
+  transform: scale(.9);
+  color: var(--grennColor) !important;
+}
+
+.titleCat {
+  /*color: black;*/
+  text-decoration: none !important;
+}
+
+@media (max-width: 815px) {
+  .cat {
+    flex-wrap: wrap !important;
+  }
+
+  .backgroundFeatured {
+    width: 100%;
+    margin: 0 auto
+  }
+
+  .categoryIndividual {
+    flex: 0 0 auto;
+    width: 40% !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .categoryIndividual {
+    flex: 0 0 auto;
+    width: 50% !important;
+  }
+
+  .featuredHR {
+    width: 80%;
+  }
+}
+
+/* Blog Home */
+
+.blogHome p,
+.blogHome h2 {
+  color: black;
+  text-decoration: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.blogHome p {
+  font-size: 14px;
+  color: #495057;
+}
+
+.blogHome h2 {
+  font-size: 24px;
+  text-align: left !important;
+}
+
+.blogHome img {
+  max-height: 220px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+@media(min-width: 1400px) {
+  .ax {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .ax h2 {
+    align-self: stretch !important;
+    margin-left: 27.656px;
+    margin-right: 27.656px;
+  }
+
+  .ax p {
+    align-self: stretch !important;
+    margin-left: 27.656px;
+    margin-right: 27.656px;
+  }
+}
+
+@media (max-width: 990px) {
+  .blogHome {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ax {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Carousel */
+
+.producto {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  padding: 10px;
+}
+
+.imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagenes img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.imagenes img:first-child {
+  opacity: 1;
+}
+
+.imagenes .flecha-izquierda,
+.imagenes .flecha-derecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.imagenes .flecha-izquierda {
+  left: 10px;
+}
+
+.imagenes .flecha-derecha {
+  right: 10px;
+}
+
+.descripcion {
+  padding: 10px;
+}
+
+
+/**********************************************/
+
+.img-lateral {
+  display: flex;
+  padding: 0 !important;
+  flex-direction: column;
+}
+
+.img-lateral-content {
+  border: 1px solid black;
+  height: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 4px;
+  filter: grayscale(0.8);
+  cursor: pointer;
+}
+
+.img-big {
+  height: 100%;
+  padding: 6px !important;
+}
+
+.img-big-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  height: 100%;
+}
+
+.container-product {
+  max-width: 1600px;
+  margin: 0 auto !important;
+}
