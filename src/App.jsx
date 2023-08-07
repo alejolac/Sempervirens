@@ -19,13 +19,12 @@ import img from "../public/img1.jpg"
 function App() {
   const [count, setCount] = useState(true)
 
-  const testProduct = { image: [img1, img1, img2], name: "Anturio", category: "Plant", description: "lorem loremlorem lorem lorem lorem lorem loremlorem loremlorem lorem " }
+  const testProduct = { image: [img1, img3, img2, img2], name: "Anturio", category: "Plant, sun", price: "$150", description: "lorem loremlorem lorem lorem lorem lorem loremlorem loremlorem lorem", url: "#" }
 
   const testReturn = () => {
     if (count) {
       return (
         <>
-          <NavBar />
           <Template product={testProduct} />
         </>
       )
@@ -46,6 +45,7 @@ function App() {
 
   return (
     <>
+      <NavBar />
       {testReturn()}
     </>
   )

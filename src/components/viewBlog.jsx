@@ -3,7 +3,7 @@ import Title from "./titleSection.jsx"
 
 const Blog = () => {
     return (
-        <div className="latest-posts pt-60 container">
+        <div className="latest-posts container back-green mt-5">
             <Title txt="Ultimas Publicaciones" />
             <div className="row container blogHome-head" style={{margin: "0"}}>
                 <div className="col-lg-4 blogHome">
