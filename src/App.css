@@ -1,6 +1,6 @@
 :root {
   --colorPrimary: #8FC74B;
-  --colorSecondary: #00B96B;
+  --colorSecondary: #5f947e;
   --footerColor: #E1EDE5;
   --font: font-family: 'Montserrat', sans-serif;
   --fontColor: #333;
@@ -14,7 +14,7 @@ body {
 }
 
 .btn-semp {
-  background-color: #01996D;
+  background-color: #DBE0A6!important;
 }
 
 .back-green {
@@ -362,7 +362,6 @@ a {
 }
 
 .img-lateral-content {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -370,7 +369,11 @@ a {
   filter: grayscale(0.8);
   cursor: pointer;
   transition: 0.5s ease-in-out;
-  width: 50%;
+  width: 58%;
+}
+
+.img-lateral-focus {
+  border: 1px solid black !important;
 }
 
 .img-lateral-content:hover {
@@ -396,9 +399,11 @@ a {
 }
 
 .container-product {
-  max-width: 1350px;
-  max-height: 650px;
+  max-width: 1450px;
+  max-height: 700px;
   margin: 0 auto !important;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .container-img {
@@ -416,7 +421,7 @@ a {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
   padding: 20px 80px 20px 20px !important;
   width: 35% !important;
-  background-color: 	#e7e2d7 !important;
+  background-color:#F5F4B4!important;
 }
 
 .product-price {
@@ -435,6 +440,7 @@ a {
 .btnProduct {
   padding: 12px !important;
   margin: 40px 0 auto !important;
+  background-color: #C9DCBE!important;
 }
 
 .atropos-template-product {
@@ -444,7 +450,6 @@ a {
 .atropos-template-product :hover{
   border-radius: 10px;
 }
-
 
 /* MODAL IMG */
 .modal-overlay {

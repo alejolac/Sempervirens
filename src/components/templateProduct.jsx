@@ -42,7 +42,7 @@ const ProductDisplay = ({ product }) => {
                             <div className="col-2 img-lateral">
                                 {product.image.map((img, index) => {
                                     return (
-                                        <div key={index} onClick={() => handleImage(img)} className="img-lateral-content">
+                                        <div key={index} onClick={() => handleImage(img)} className={img == product1 ? 'img-lateral-content img-lateral-focus' : 'img-lateral-content'}>
                                             <img src={img} alt="" />
                                         </div>
                                     )
