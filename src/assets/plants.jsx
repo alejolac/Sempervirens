@@ -1,0 +1,38 @@
+const productos = [
+    {
+        id: 1,
+        imagen: ["anturio-1.jpg", "anturio-2.jpg", "anturio-3.jpg"],
+        nombre: "Anturio",
+        categoria: "Planta, sol",
+        precio: "$150",
+        descripcion: "Un hermoso anturio perfecto para espacios soleados.",
+        url: "#",
+    },
+    {
+        id: 2,
+        imagen: ["suculenta-1.jpg", "suculenta-2.jpg", "suculenta-3.jpg"],
+        nombre: "Suculenta",
+        categoria: "Planta, interior",
+        precio: "$25",
+        descripcion: "Una hermosa suculenta ideal para tu espacio interior.",
+        url: "#",
+    },
+    {
+        id: 3,
+        imagen: ["rosa-1.jpg", "rosa-2.jpg", "rosa-3.jpg"],
+        nombre: "Rosa",
+        categoria: "Flor, jardín",
+        precio: "$10",
+        descripcion: "Clásicas rosas rojas para añadir elegancia a tu jardín.",
+        url: "#",
+    },
+    {
+        id: 4,
+        imagen: ["lavanda-1.jpg", "lavanda-2.jpg", "lavanda-3.jpg"],
+        nombre: "Lavanda",
+        categoria: "Planta, aromática",
+        precio: "$12",
+        descripcion: "Plantas de lavanda fragantes que traen un aroma relajante a tu entorno.",
+        url: "#",
+    },
+];
