@@ -36,7 +36,6 @@ const ProductDisplay = ({ product }) => {
         <>
             {product1 != undefined &&
                 <div className="pt-120">
-
                     <div className="row back-green container-product">
                         <div className="col-8 row container-img">
                             <div className="col-2 img-lateral">
@@ -71,7 +70,7 @@ const ProductDisplay = ({ product }) => {
                             </div>
                             <div className="product-btn">
                                 <a href={product.url}><button className="btn btn-success btnProduct">Ir a comprar
-                                    <svg style={{ marginLeft: "10px" }} width="24px" height="24px" viewBox="0 0 24 24" strokeWidth="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff"><path d="M21 3h-6m6 0l-9 9m9-9v6" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M21 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h6" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round"></path></svg>
+                                    <svg className="svg-product" style={{ marginLeft: "10px" }} width="24px" height="24px" viewBox="0 0 24 24" strokeWidth="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff"><path d="M21 3h-6m6 0l-9 9m9-9v6" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M21 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h6" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round"></path></svg>
                                 </button></a>
                             </div>
                         </div>
@@ -79,8 +78,9 @@ const ProductDisplay = ({ product }) => {
                     {modalOpen && (
                         <div className="modal-overlay" onClick={handleCloseModal}>
                             <div className="modalIMG">
-                                <img className="large-image" src={product1} alt=""  />
+                                <img className="large-image" src={product1} alt="" />
                             </div>
+                            <span className="close-modal-x">&times;</span>
                         </div>
                     )}
                 </div>
