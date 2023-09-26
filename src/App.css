@@ -354,6 +354,12 @@ a {
 
 /* Template Producto */
 
+.flex-product {
+  display: flex !important;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .img-lateral {
   display: flex;
   padding: 0 !important;
@@ -388,6 +394,7 @@ a {
 
 .img-big img {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .img-big-content {
@@ -496,3 +503,27 @@ a {
   cursor: pointer;
   color: #ffffff;
 }
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.imagen-producto {
+  max-width: 100%;
+  height: auto;
+}
+
+.precio {
+  color: green;
+}
+
+.productos-relacionados {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+

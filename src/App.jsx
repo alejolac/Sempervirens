@@ -14,18 +14,27 @@ import img1 from "../public/img1.jpg"
 import img2 from "../public/img2.jpg"
 import img3 from "../public/img3.jpg"
 
-import img from "../public/img1.jpg"
-
+import Products from "./assets/plants.jsx"
 function App() {
   const [count, setCount] = useState(true)
+  const [data, setData] = useState(1)
 
   const testProduct = { image: [img1, img3, img2, img2], name: "Anturio", category: "Plant, sun", price: "$150", description: "lorem loremlorem lorem lorem lorem lorem loremlorem loremlorem lorem", url: "#" }
 
+  const handleProductData = value => {
+    setData(value)
+  }
+
+  const handleCount = value => {
+    setCount(value)
+  }
+
   const testReturn = () => {
-    if (count) {
+    if (count == 1) {
+      const product = Products.find(producto => producto.id === data);
       return (
         <>
-          <Template product={testProduct} />
+          <Template product={product} handleProductData={handleProductData} />
         </>
       )
     }
