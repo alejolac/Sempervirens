@@ -13,7 +13,7 @@ const ProductDisplay = ({ product }) => {
     const [product1, setProduct1] = useState(product.image[0])
 
     useEffect(() => {
-        console.log(product.image[0]);
+        //console.log(product.image[0]);
     }, [])
 
     const handleImage = (img) => {
@@ -73,11 +73,11 @@ const ProductDisplay = ({ product }) => {
                     <div className="container-product back-green    ">
                         <div className="productos-relacionados">
                             {product.relacionados.map((relacionado, index) => (
-                                <Producto key={index} producto={relacionado} />
+                                <Test key={relacionado.id} producto={relacionado.image} />
                             ))}
                         </div>
                     </div>
-                    <Test img={product.image[0]}/>
+                    <Test img={product.image[0]} />
                 </div>
             }
             {modalOpen && (
