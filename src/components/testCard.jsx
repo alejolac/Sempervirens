@@ -7,14 +7,13 @@ import { CardActionArea } from '@mui/material';
 import imgImport from "../../public/img1.jpg"
 
 export default function ActionAreaCard({img, title, text, price}) {
-    img = "../../public/"+img
     return (
         <Card sx={{ maxWidth: 245 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
                     height="275"
-                    image={imgImport}
+                    image={img}
                     alt="green iguana"
                 />
                 <CardContent>

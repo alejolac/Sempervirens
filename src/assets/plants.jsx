@@ -17,14 +17,14 @@ const products = [
             },
             {
                 id: 3,
-                image: "img1.jpg",
+                image: "img2.jpg",
                 name: "Rosa",
                 price: "$10",
                 description: "Clásicas rosas rojas para añadir elegancia a tu jardín.",
             },
             {
                 id: 4,
-                image: "img1.jpg",
+                image: "img3.jpg",
                 name: "Lavanda",
                 price: "$12",
                 description: "Plantas de lavanda fragantes que traen un aroma relajante a tu entorno.",
