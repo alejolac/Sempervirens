@@ -16,7 +16,7 @@ import img3 from "../public/img3.jpg"
 
 import Products from "./assets/plants.jsx"
 function App() {
-  const [count, setCount] = useState(true)
+  const [count, setCount] = useState(1)
   const [data, setData] = useState(1)
 
   const testProduct = { image: [img1, img3, img2, img2], name: "Anturio", category: "Plant, sun", price: "$150", description: "lorem loremlorem lorem lorem lorem lorem loremlorem loremlorem lorem", url: "#" }

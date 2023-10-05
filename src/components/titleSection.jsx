@@ -1,4 +1,4 @@
-import "./styles/TituloSeccion.css";
+import "./styles/tituloSeccion.css";
 
 function TituloSeccion({txt}) {
     return (

@@ -31,21 +31,13 @@ const ProductDisplay = ({ product }) => {
         };
     }, []);
 
-
-
-
     const handleImage = (img) => {
         setProduct1(img)
     }
-
-    const setImages = (z) => {
-        return product.images[z]
-    }
-
     const [modalOpen, setModalOpen] = useState(false);
 
     const handleImageClick = (img) => {
-        console.log("asd");
+        console.log(img);
         setImgModal(img)
         setModalOpen(true);
     };
@@ -64,41 +56,42 @@ const ProductDisplay = ({ product }) => {
             </div>
         )
     }
+    console.log(product);
     //<InfoProduct product={product} />
-
-
-
-
     return (
         <>
             {product1 != undefined &&
                 <div className="pt-120 flex-product">
                     {screenWidth <= 980 ? (
-                        <div className="back-green-phone">
-                            <Box className="product-image-phone" 
-                                sx={{
-                                    display: 'flex',
-                                    gap: 1,
-                                    py: 1,
-                                    overflow: 'auto',
-                                    width: 340,
-                                    scrollSnapType: 'x mandatory',
-                                    '& > *': {
-                                        scrollSnapAlign: 'center',
-                                    },
-                                    '::-webkit-scrollbar': { display: 'none' },
-                                }}
-                            >
-                                {product.image.map((img, index) => (
-                                    <AspectRatio key={index} ratio="1" sx={{ minWidth: 340 }} >
-                                        <img
-                                            srcSet={`${img}?h=120&fit=crop&auto=format&dpr=2 2x`}
-                                            src={`${img}?h=120&fit=crop&auto=format`}
-                                            alt={"pruebas"}
-                                        />
-                                    </AspectRatio>
-                                ))}
-                            </Box>
+                        <div className="back-green-phone-head">
+                            <div className="phone-name"><h1>{product.name}</h1></div>
+                            <div className="back-green-phone">
+                                <Box className="product-image-phone" 
+                                    sx={{
+                                        display: 'flex',
+                                        gap: 1,
+                                        py: 1,
+                                        overflow: 'auto',
+                                        width: 340,
+                                        scrollSnapType: 'x mandatory',
+                                        '& > *': {
+                                            scrollSnapAlign: 'center',
+                                        },
+                                        '::-webkit-scrollbar': { display: 'none' },
+                                    }}
+                                >
+                                    {product.image.map((img, index) => (
+                                        <AspectRatio key={index} ratio="1" sx={{ minWidth: 340 }} >
+                                            <img
+                                                srcSet={`${img}?h=120&fit=crop&auto=format&dpr=2 2x`}
+                                                src={`${img}?h=120&fit=crop&auto=format`}
+                                                alt={"pruebas"}
+                                            />
+                                        </AspectRatio>
+                                    ))}
+                                </Box>
+                            </div>
+                            
                         </div>
                     ) : (
                         <div className="row back-green container-product">
@@ -114,7 +107,7 @@ const ProductDisplay = ({ product }) => {
                                 </div>
                                 <div className="col-8 img-big">
                                     <div className="img-big-content">
-                                        <Atropos className="atropos-template-product" onClick={() => handleImageClick()}>
+                                        <Atropos className="atropos-template-product" onClick={() => handleImageClick(product1)}>
                                             <img src={product1} alt="" />
                                         </Atropos>
                                     </div>

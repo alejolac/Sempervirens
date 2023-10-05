@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import imgLogo from "../../public/imgLogo.png"
-import "./styles/navBar.css"
+import "./styles/navbar.css"
 
 const NavBar = () => {
     return (
