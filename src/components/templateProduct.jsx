@@ -15,17 +15,29 @@ const ProductDisplay = ({ product }) => {
     const [product1, setProduct1] = useState(product.image[0])
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [imgModal, setImgModal] = useState()
+    const [descriptionState, setDescriptionState] = useState(2)
+    const [descriptionValue, setDescriptionValue] = useState(product.description)
+
+    let backColor = screenWidth <= 980 ? "pt-120 flex-product phone-product" : "pt-120 flex-product"
 
     useEffect(() => {
-        // Función para actualizar screenWidth cuando cambie el tamaño de la ventana
         const handleResize = () => {
             setScreenWidth(window.innerWidth);
         };
 
-        // Agregar el event listener para el cambio de tamaño
         window.addEventListener('resize', handleResize);
 
-        // Limpiar el event listener cuando el componente se desmonta
+        // Description
+        function description(val) {
+            let newVal = val.split(" ");
+            if (newVal.length > 20) {
+                setDescriptionValue(newVal.slice(0, 14).join(" "))
+                setDescriptionState(1)
+            }
+            else setDescriptionState(2)
+        }
+        description(product.description)
+
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -37,7 +49,6 @@ const ProductDisplay = ({ product }) => {
     const [modalOpen, setModalOpen] = useState(false);
 
     const handleImageClick = (img) => {
-        console.log(img);
         setImgModal(img)
         setModalOpen(true);
     };
@@ -45,6 +56,31 @@ const ProductDisplay = ({ product }) => {
     const handleCloseModal = () => {
         setModalOpen(false);
     };
+
+    // Code Description
+
+    function handleDescriptionValue(val) {
+        let newVal = val.split(" ");
+        if (newVal.length > 20) setDescriptionValue(newVal.slice(0, 14).join(" "))
+    }
+
+    function handleDescription() {
+        if (descriptionState == 1) {
+            setDescriptionState(0)
+            setDescriptionValue(product.description)
+        }
+        else {
+            setDescriptionState(1)
+            handleDescriptionValue(descriptionValue)
+        }
+    }
+
+    function destcriptionSeeMore () {
+        if (descriptionState == 1) return <span onClick={handleDescription} className="span-ver">Ver mas</span>
+        else if (descriptionState == 0) return <span onClick={handleDescription} className="span-ver">Ver menos</span>
+        else return
+        
+    }
 
     function Producto({ producto }) {
         return (
@@ -56,23 +92,24 @@ const ProductDisplay = ({ product }) => {
             </div>
         )
     }
-    console.log(product);
-    //<InfoProduct product={product} />
+
+
     return (
         <>
             {product1 != undefined &&
-                <div className="pt-120 flex-product">
+                <div className={backColor}>
                     {screenWidth <= 980 ? (
                         <div className="back-green-phone-head">
-                            <div className="phone-name"><h1>{product.name}</h1></div>
+                            <div className="text-phone phone-name"><h1>{product.name}</h1></div>
+                            <div className="text-phone phone-category"><p className="mb-0">{product.category}</p></div>
                             <div className="back-green-phone">
-                                <Box className="product-image-phone" 
+                                <Box className="product-image-phone"
                                     sx={{
                                         display: 'flex',
                                         gap: 1,
                                         py: 1,
                                         overflow: 'auto',
-                                        width: 340,
+                                        width: 300,
                                         scrollSnapType: 'x mandatory',
                                         '& > *': {
                                             scrollSnapAlign: 'center',
@@ -81,17 +118,20 @@ const ProductDisplay = ({ product }) => {
                                     }}
                                 >
                                     {product.image.map((img, index) => (
-                                        <AspectRatio key={index} ratio="1" sx={{ minWidth: 340 }} >
+                                        <AspectRatio key={index} ratio="1" sx={{ minWidth: 300 }} >
                                             <img
                                                 srcSet={`${img}?h=120&fit=crop&auto=format&dpr=2 2x`}
                                                 src={`${img}?h=120&fit=crop&auto=format`}
-                                                alt={"pruebas"}
+                                                alt={"imagen producto"}
                                             />
                                         </AspectRatio>
                                     ))}
                                 </Box>
                             </div>
-                            
+                            <div className="text-phone price-phone"><span className="price-phone-signo">$</span><span>{product.price}</span></div>
+                            <div className="text-phone phone-description">
+                                <p className="mb-0">{descriptionValue}{destcriptionSeeMore()}</p>
+                            </div>
                         </div>
                     ) : (
                         <div className="row back-green container-product">
@@ -100,7 +140,7 @@ const ProductDisplay = ({ product }) => {
                                     {product.image.map((img, index) => {
                                         return (
                                             <div key={index} onClick={() => handleImage(img)} className={img == product1 ? 'img-lateral-content img-lateral-focus' : 'img-lateral-content'}>
-                                                <img src={img} alt="" />
+                                                <img src={img} alt={product.name} />
                                             </div>
                                         )
                                     })}
