@@ -415,7 +415,7 @@ a {
   filter: grayscale(0.8);
   cursor: pointer;
   transition: 0.5s ease-in-out;
-  width: 58%;
+  width: 64%;
 }
 
 .img-lateral-focus {
@@ -520,6 +520,30 @@ a {
 .productos-relacionados-title {
   margin-bottom: 40px !important;
 }
+
+@media(max-width: 675px) {
+  .button-releated-btn{
+    margin: 20px auto!important;
+  }
+}
+
+@media(max-width: 1080px) {
+  .phone-releated-button {
+    justify-content: center!important;
+  }
+}
+
+.phone-releated-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px auto;
+}
+
+.button-releated-btn {
+  max-width: 245px!important;
+}
+
+
 
 /* Template Product Phone */
 

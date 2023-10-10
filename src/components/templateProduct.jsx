@@ -161,6 +161,9 @@ const ProductDisplay = ({ product }) => {
                                 <Test key={relacionado.id} img={relacionado.image} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
                             ))}
                         </div>
+                        <div className="phone-releated-button">
+                            <Button className="button-phone-shadow button-releated-btn" style={{ backgroundColor: "#C8DBBD", width: "100%" }} size="large" variant="contained">Ver todos</Button>
+                        </div>
                     </div>
                 </div>
             }
