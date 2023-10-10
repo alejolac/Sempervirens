@@ -23,6 +23,13 @@ body {
   padding: 40px 80px;
 }
 
+@media (max-width: 965px) {
+  .back-green {
+    box-shadow: none !important;
+    padding: 20px 40px;
+  }
+}
+
 .back-green-phone-head {
   width: 100%;
   margin: 0 auto;
@@ -74,7 +81,7 @@ img {
 
 @media (max-width: 985px) {
   .pt-120 {
-    padding-top: 140px!important;
+    padding-top: 120px!important;
   }
 }
 
@@ -375,6 +382,14 @@ a {
     align-items: center;
     justify-content: center;
   }
+
+  .flex-product {
+    gap: 0px!important;
+  }
+
+  .productos-relacionados {
+    gap: 40px!important;
+  }
 }
 
 /* Template Producto */
@@ -494,6 +509,18 @@ a {
   border-radius: 10px;
 }
 
+/* Product relacionados */
+
+.productos-relacionados-title h3 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.productos-relacionados-title {
+  margin-bottom: 40px !important;
+}
+
 /* Template Product Phone */
 
 .product-image-phone {
@@ -521,7 +548,8 @@ a {
 }
 
 .price-phone span {
-  font-weight: 300!important
+  font-weight: 300!important;
+  color: rgb(0, 0, 0);
 }
 
 .price-phone-signo {
@@ -529,7 +557,7 @@ a {
 }
 
 .phone-description {
-  font-size: 14px;
+  font-size: 16px;
   max-width: 86%;
 }
 
@@ -538,6 +566,26 @@ a {
   color: #646668;
   font-weight: 500;
   margin-left: 8px;
+}
+
+.phone-product-button {
+  margin: 14px 4%;
+}
+
+.button-phone-shadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px!important;
+}
+
+.phone-product-button p{
+  text-align: center;
+  margin-top: 6px;
+  font-size: 14px;
+  color: rgb(102, 101, 101) !important;
+}
+
+.hr-product-phone {
+  width: 90%;
+  margin: 20px auto;
 }
 
 /* MODAL IMG */

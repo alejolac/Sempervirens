@@ -7,6 +7,7 @@ import Test from "./testCard.jsx"
 
 import AspectRatio from '@mui/joy/AspectRatio';
 import Box from '@mui/joy/Box';
+import Button from '@mui/material/Button';
 import Typography from '@mui/joy/Typography';
 import Card from '@mui/joy/Card';
 
@@ -75,24 +76,12 @@ const ProductDisplay = ({ product }) => {
         }
     }
 
-    function destcriptionSeeMore () {
+    function destcriptionSeeMore() {
         if (descriptionState == 1) return <span onClick={handleDescription} className="span-ver">Ver mas</span>
         else if (descriptionState == 0) return <span onClick={handleDescription} className="span-ver">Ver menos</span>
         else return
-        
-    }
 
-    function Producto({ producto }) {
-        return (
-            <div className="producto">
-                <img src={producto.image} alt={producto.name} className="imagen-producto" />
-                <h2>{producto.name}</h2>
-                <p className="precio">{producto.price}</p>
-                <p>{producto.description}</p>
-            </div>
-        )
     }
-
 
     return (
         <>
@@ -132,6 +121,13 @@ const ProductDisplay = ({ product }) => {
                             <div className="text-phone phone-description">
                                 <p className="mb-0">{descriptionValue}{destcriptionSeeMore()}</p>
                             </div>
+                            <div className="phone-product-button">
+                                <Button className="button-phone-shadow" style={{ backgroundColor: "#C8DBBD", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
+                                <p className="product-"> - Las compras se realizan por mercado libre - </p>
+                            </div>
+                            <div className="hr-product-phone">
+                                <hr />
+                            </div>
                         </div>
                     ) : (
                         <div className="row back-green container-product">
@@ -156,10 +152,15 @@ const ProductDisplay = ({ product }) => {
                         </div>
                     )}
 
-                    <div className="container-product back-green productos-relacionados">
-                        {product.relacionados.map((relacionado, index) => (
-                            <Test key={relacionado.id} img={relacionado.image} />
-                        ))}
+                    <div className="back-green container-product">
+                        <div className="productos-relacionados-title">
+                            <h3>Productos Relacionados</h3>
+                        </div>
+                        <div className="productos-relacionados">
+                            {product.relacionados.map((relacionado, index) => (
+                                <Test key={relacionado.id} img={relacionado.image} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
+                            ))}
+                        </div>
                     </div>
                 </div>
             }

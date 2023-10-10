@@ -11,6 +11,12 @@
     border-bottom: 1px solid rgb(165, 164, 165);
 }
 
+@media (max-width: 965px) {
+    .navbar {
+        padding: 14px !important;
+    }
+}
+
 .navbar-nav {
     font-size: 25px;
     color: var(--fontColor);
@@ -20,7 +26,7 @@
 }
 
 .navbar-head {
-    position: fixed!important;
+    position: fixed !important;
     width: 100%;
     z-index: 1000;
 }

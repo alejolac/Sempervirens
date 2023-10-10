@@ -20,7 +20,14 @@ const products = [
                 image: "img2.jpg",
                 name: "Rosa",
                 price: "10",
-                description: "Clásicas rosas rojas para añadir elegancia a tu jardín.",
+                description: "Clásicas rosas rojas para añadir elegancia a tu jardín.Una hermosa suculenta ideal para tu espacio interior.",
+            },
+            {
+                id: 20,
+                image: "img1.jpg",
+                name: "Suculenta",
+                price: "25",
+                description: "Una hermosa suculenta ideal para tu espacio interior.",
             },
             {
                 id: 4,
