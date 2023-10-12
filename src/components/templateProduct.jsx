@@ -8,7 +8,7 @@ import Test from "./testCard.jsx"
 import AspectRatio from '@mui/joy/AspectRatio';
 import Box from '@mui/joy/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/joy/Typography';
+import Typography from '@mui/material/Typography';
 import Card from '@mui/joy/Card';
 
 
@@ -147,6 +147,16 @@ const ProductDisplay = ({ product }) => {
                                             <img src={product1} alt="" />
                                         </Atropos>
                                     </div>
+                                </div>
+                            </div>
+                            <div className="col-4 template-product-info">
+                                <div className={`template-product-name`}><Typography variant="h3">{product.name}</Typography></div>
+                                <div className={`template-product-category`}><Typography variant="subtitle1">{product.category}</Typography></div>
+                                <div className={`template-product-description`}><Typography variant="body1">{product.description}</Typography></div>
+                                <div className={`template-product-price`}><Typography variant="h5">$ {product.price}</Typography></div>
+                                <div className="phone-product-button">
+                                    <Button className="button-phone-shadow" style={{ backgroundColor: "#C8DBBD", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
+                                    <p className="product-"> - Las compras se realizan por mercado libre - </p>
                                 </div>
                             </div>
                         </div>
