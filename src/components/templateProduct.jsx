@@ -3,6 +3,7 @@ import InfoProduct from "./infoProduct.jsx"
 import "atropos/css";
 import Atropos from "atropos/react";
 import Test from "./testCard.jsx"
+import Footer from "./footer.jsx"
 
 
 import AspectRatio from '@mui/joy/AspectRatio';
@@ -155,7 +156,7 @@ const ProductDisplay = ({ product }) => {
                                 <div className={`template-product-description`}><Typography variant="body1">{product.description}</Typography></div>
                                 <div className={`template-product-price`}><Typography variant="h5">$ {product.price}</Typography></div>
                                 <div className="phone-product-button">
-                                    <Button className="button-phone-shadow" style={{ backgroundColor: "#C8DBBD", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
+                                    <Button className="button-phone-shadow" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
                                     <p className="product-"> - Las compras se realizan por mercado libre - </p>
                                 </div>
                             </div>
@@ -172,10 +173,12 @@ const ProductDisplay = ({ product }) => {
                             ))}
                         </div>
                         <div className="phone-releated-button">
-                            <Button className="button-phone-shadow button-releated-btn" style={{ backgroundColor: "#C8DBBD", width: "100%" }} size="large" variant="contained">Ver todos</Button>
+                            <Button className="button-phone-shadow button-releated-btn" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Ver todos</Button>
                         </div>
                     </div>
+                    <Footer />
                 </div>
+
             }
             {modalOpen && (
                 <div className="modal-overlay" onClick={handleCloseModal}>

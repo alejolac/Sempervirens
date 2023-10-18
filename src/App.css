@@ -692,3 +692,115 @@ a {
 .productos-relacionados {
   gap: 80px;
 }
+
+/* Footer */
+
+/* Estilos para el footer */
+/* Estilos base para el footer */
+/* Estilos para el footer */
+/* Estilos para el footer */
+footer {
+  border-top: 1px solid rgb(165, 164, 165);
+  background-color: #c8dbbd; /* Color de fondo del footer */
+  color: #000; /* Cambiar el color del texto a negro */
+  padding: 40px; /* Espaciado interior del footer */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  justify-content: center;
+  gap: 120px; /* Aumentar el espacio entre elementos a 120px en la versión de escritorio */
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 160px; /* Aumentar el tamaño del logo en la versión de escritorio */
+  height: auto;
+  margin-bottom: 10px; /* Espaciado inferior para dispositivos móviles */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el logo */
+}
+
+.footer-logo img:hover {
+  opacity: 0.8; /* Cambiar la opacidad al pasar sobre el logo */
+  transform: translateY(-5px); /* Elevar ligeramente el elemento al pasar sobre él */
+  transition: transform 0.4s ease-in-out; /* Agregar transición suave al efecto */
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin: 6px 0;
+  transition: 0.6s ease-in-out;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  font-size: 16px!important;
+  color: #000; /* Cambiar el color del texto de enlaces a negro */
+}
+
+.footer-nav li:hover {
+  color: #888; /* Cambiar el color a gris al pasar sobre el enlace */
+  transform: translateY(-5px); /* Elevar ligeramente el enlace al pasar sobre él */
+}
+
+.footer-social a {
+  margin: 0 10px;
+  color: #000; /* Cambiar el color de los iconos de redes sociales a negro */
+}
+
+.footer-social li {
+  font-size: 24px;
+}
+
+
+.footer-social svg {
+  width: 1.5em;
+  height: 1.5em;
+  transition: 0.2s ease-in-out;
+}
+
+.footer-social svg:hover {
+  color: #888; /* Cambiar el color a gris al pasar sobre el enlace */
+}
+
+
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; 
+    gap: 30px;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: row; /* Cambia a una disposición horizontal en dispositivos móviles */
+    align-items: center;
+  }
+
+  .footer-logo {
+    width: 120px; /* Aumentar el tamaño del logo en la versión de escritorio */
+    margin-bottom: 0; /* Elimina el espacio inferior en dispositivos móviles */
+  }
+
+  .footer-nav {
+    margin-left: 20px; /* Añade espacio entre el logo y los enlaces en dispositivos móviles */
+  }
+}
