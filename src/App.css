@@ -87,6 +87,13 @@ img {
 
 /* Home */
 
+@media (min-width: 965px) {
+  .btn-home {
+    width: 268px!important;
+    margin: 0 auto;
+  }
+}
+
 .containerBackground {
   display: flex;
   justify-content: center;
@@ -161,15 +168,10 @@ img {
 /* Productos destacados */
 
 .featuredHR {
-  width: 380px;
   margin: 0 auto;
   color: var(--grennColor);
   margin-bottom: 30px;
   margin-bottom: 40px;
-}
-
-.productFeat:hover {
-  transform: scale(1.04)
 }
 
 .productFeat img {
@@ -180,10 +182,6 @@ img {
   font-size: 22px;
 }
 
-.featureLinkCard {
-  text-decoration: none;
-  color: black;
-}
 
 .card-body p {
   font-size: 17px;
@@ -192,10 +190,6 @@ img {
 .card-body span {
   color: var(--grennColor);
   font-size: 20px;
-}
-
-.featureLinkCard:hover {
-  color: black;
 }
 
 .btnViewAll button {
@@ -694,11 +688,6 @@ a {
 }
 
 /* Footer */
-
-/* Estilos para el footer */
-/* Estilos base para el footer */
-/* Estilos para el footer */
-/* Estilos para el footer */
 footer {
   border-top: 1px solid rgb(165, 164, 165);
   background-color: #c8dbbd; /* Color de fondo del footer */

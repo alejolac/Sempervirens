@@ -9,7 +9,6 @@ import imgImport from "../../public/img1.jpg"
 
 export default function ActionAreaCard({ img, title, text, price }) {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
     useEffect(() => {
         const handleResize = () => {
             setScreenWidth(window.innerWidth);
@@ -30,7 +29,7 @@ export default function ActionAreaCard({ img, title, text, price }) {
     }
 
     return (
-        <Card sx={{ maxWidth: 265 }}>
+        <Card style={{margin: "0 auto"}} sx={{ maxWidth: 265 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
