@@ -1,19 +1,23 @@
 import { useState, useEffect } from "react"
-import InfoProduct from "./infoProduct.jsx"
 import "atropos/css";
 import Atropos from "atropos/react";
 import Test from "./testCard.jsx"
 import Footer from "./footer.jsx"
-
+import Nav from "./navBar.jsx"
+import { useParams } from "react-router-dom";
+import Plants from "../assets/plants.jsx"
 
 import AspectRatio from '@mui/joy/AspectRatio';
 import Box from '@mui/joy/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Card from '@mui/joy/Card';
 
 
 const ProductDisplay = ({ product }) => {
+    if (product == undefined) {
+        product = useParams().productId
+        product = Plants.find(producto => producto.id == product)
+    }
     const [product1, setProduct1] = useState(product.image[0])
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [imgModal, setImgModal] = useState()
@@ -28,6 +32,8 @@ const ProductDisplay = ({ product }) => {
         };
 
         window.addEventListener('resize', handleResize);
+
+        window.scrollTo(0, 0);
 
         // Description
         function description(val) {
@@ -83,9 +89,8 @@ const ProductDisplay = ({ product }) => {
         else return
 
     }
-
     return (
-        <>
+        <>  <Nav />
             {product1 != undefined &&
                 <div className={backColor}>
                     {screenWidth <= 980 ? (
@@ -111,7 +116,7 @@ const ProductDisplay = ({ product }) => {
                                         <AspectRatio key={index} ratio="1" sx={{ minWidth: 300 }} >
                                             <img
                                                 srcSet={`${img}?h=120&fit=crop&auto=format&dpr=2 2x`}
-                                                src={`${img}?h=120&fit=crop&auto=format`}
+                                                src={`../../public/${img}?h=120&fit=crop&auto=format`}
                                                 alt={"imagen producto"}
                                             />
                                         </AspectRatio>
@@ -137,7 +142,7 @@ const ProductDisplay = ({ product }) => {
                                     {product.image.map((img, index) => {
                                         return (
                                             <div key={index} onClick={() => handleImage(img)} className={img == product1 ? 'img-lateral-content img-lateral-focus' : 'img-lateral-content'}>
-                                                <img src={img} alt={product.name} />
+                                                <img src={`../../public/${img}`} alt={product.name} />
                                             </div>
                                         )
                                     })}
@@ -145,7 +150,7 @@ const ProductDisplay = ({ product }) => {
                                 <div className="col-8 img-big">
                                     <div className="img-big-content">
                                         <Atropos className="atropos-template-product" onClick={() => handleImageClick(product1)}>
-                                            <img src={product1} alt="" />
+                                            <img src={`../../public/${product1}`} alt="" />
                                         </Atropos>
                                     </div>
                                 </div>
@@ -169,7 +174,7 @@ const ProductDisplay = ({ product }) => {
                         </div>
                         <div className="productos-relacionados">
                             {product.relacionados.map((relacionado, index) => (
-                                <Test key={relacionado.id} img={relacionado.image} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
+                                <Test key={relacionado.id} img={`../../public/${relacionado.image}`} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
                             ))}
                         </div>
                         <div className="phone-releated-button">
@@ -183,7 +188,7 @@ const ProductDisplay = ({ product }) => {
             {modalOpen && (
                 <div className="modal-overlay" onClick={handleCloseModal}>
                     <div className="modalIMG">
-                        <img className="large-image" src={imgModal} alt="" />
+                        <img className="large-image" src={`../../public/${imgModal}`} alt="" />
                     </div>
                     <span className="close-modal-x">&times;</span>
                 </div>

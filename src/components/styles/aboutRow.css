@@ -1,5 +1,11 @@
 .aboutSection {
-    padding: 120px 0px;
+    padding: 100px 0px;
+}
+
+@media (max-width: 962px) {
+    .aboutSection {
+        padding: 60px 0;
+    }
 }
 
 .about {

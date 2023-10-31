@@ -102,15 +102,22 @@ img {
 
 .imgFondo {
   width: 100%;
-  height: 620px;
-  padding-top: 130px;
-  padding-bottom: 130px;
+  height: 580px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-position: center center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+
+@media (max-width: 965px) {
+  .imgFondo {
+    padding: 40px 0;
+    height: 680px;
+  }
 }
 
 .imgFondo::before {
@@ -233,6 +240,15 @@ img {
   }
 }
 
+.text-dest-media {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.atropos-product-main {
+  box-sizing: none;
+}
+
 .title {
   color: var(--grennColor);
   font-size: 30px !important;
@@ -333,11 +349,12 @@ a {
 .blogHome h2 {
   font-size: 24px;
   text-align: left !important;
+  padding-top: 10px;
 }
 
 .blogHome img {
   max-height: 220px;
-  border: 1px solid black;
+  border: 1px solid rgb(165, 164, 165);
   margin: 0 auto;
 }
 

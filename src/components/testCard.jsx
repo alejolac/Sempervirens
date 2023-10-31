@@ -29,11 +29,11 @@ export default function ActionAreaCard({ img, title, text, price }) {
     }
 
     return (
-        <Card style={{margin: "0 auto"}} sx={{ maxWidth: 265 }}>
+        <Card style={{margin: "0 auto"}} sx={{ maxWidth: 235 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="295"
+                    height="265"
                     image={img}
                     alt={title}
                 />

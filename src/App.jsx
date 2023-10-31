@@ -17,7 +17,7 @@ import Footer from "./components/footer.jsx";
 
 import Products from "./assets/plants.jsx"
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(21)
   const [data, setData] = useState(1)
 
   const testProduct = { image: [img1, img3, img2, img2], name: "Anturio", category: "Plant, sun", price: "$150", description: "lorem loremlorem lorem lorem lorem lorem loremlorem loremlorem lorem", url: "#" }
