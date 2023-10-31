@@ -18,15 +18,25 @@
 }
 
 .navbar-nav {
-    font-size: 25px;
+    font-size: 24px;
     color: var(--fontColor);
     font-weight: 400 !important;
     justify-content: space-between !important;
-    width: 90% !important;
+    width: 100% !important;
 }
 
 .navbar-head {
     position: fixed !important;
     width: 100%;
     z-index: 1000;
+}
+
+.nav-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.nav-item a {
+    color: rgba(0, 0, 0, 0.65);
 }

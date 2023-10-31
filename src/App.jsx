@@ -10,9 +10,6 @@ import ProductosMain from './components/productosMain.jsx';
 import BestCategories from './components/bestCategories.jsx';
 import ViewBlog from "./components/viewBlog.jsx";
 import Template from "./components/templateProduct.jsx";
-import img1 from "../public/img1.jpg"
-import img2 from "../public/img2.jpg"
-import img3 from "../public/img3.jpg"
 import Footer from "./components/footer.jsx";
 
 import Products from "./assets/plants.jsx"
@@ -20,14 +17,9 @@ function App() {
   const [count, setCount] = useState(21)
   const [data, setData] = useState(1)
 
-  const testProduct = { image: [img1, img3, img2, img2], name: "Anturio", category: "Plant, sun", price: "$150", description: "lorem loremlorem lorem lorem lorem lorem loremlorem loremlorem lorem", url: "#" }
 
   const handleProductData = value => {
     setData(value)
-  }
-
-  const handleCount = value => {
-    setCount(value)
   }
 
   const testReturn = () => {
