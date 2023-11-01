@@ -49,10 +49,11 @@ const ProductosMain = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="my-4 col-12 btn-home">
-                    <Button style={{ backgroundColor: "#01996D", width: "100%" }} size="large" variant="contained">Ver Todo</Button>
-                </div>
-
+                <Link to={"products/"}>
+                    <div className="my-4 col-12 btn-home">
+                        <Button style={{ backgroundColor: "#01996D", width: "100%" }} size="large" variant="contained">Ver Todo</Button>
+                    </div>
+                </Link>
             </div>
         </div>
     )
