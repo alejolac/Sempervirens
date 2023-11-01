@@ -9,6 +9,7 @@ import imgImport from "../../public/img1.jpg"
 
 export default function ActionAreaCard({ img, title, text, price }) {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    console.log(img, title, text, price);
     useEffect(() => {
         const handleResize = () => {
             setScreenWidth(window.innerWidth);
