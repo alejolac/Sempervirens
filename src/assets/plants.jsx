@@ -5,7 +5,7 @@ const products = [
         name: "Anturio",
         category: "Planta, Luz Indirecta, Fácil de Mantener",
         price: "150",
-        description: "El Anthurium es una planta de interior elegante y de bajo mantenimiento. Sus hojas verdes brillantes y flores en forma de corazón añaden un toque exótico y natural a cualquier espacio.",
+        description: "El Anthurium es una plrosas rojas para añadir elegancia a tu jardín.Una hermosa suculenta ideal para tu espacio interioanta de interior elegante y de bajo mantenimiento. Sus hojas verdes brillantes y flores en forma de corazón añaden un toque exótico y natural a cualquier espacio.",
         url: "#",
         relacionados: [
             {
@@ -37,7 +37,7 @@ const products = [
         name: "Suculenta",
         category: "Planta, interior",
         price: "25",
-        description: "Una hermosa suculenta ideal para tu espacio interior.",
+        description: "Una hermosa suculenta ideal parosas rojas para añadir elegancia a tu jardín.Una hermosa suculenta ideal para tu espacio interiora tu espacio interior.",
         url: "#",
         relacionados: [
             {
@@ -59,7 +59,7 @@ const products = [
                 image: "img1.jpg",
                 name: "Lavanda",
                 price: "12",
-                description: "Plantas de lavanda fragantes que traen un aroma relajante a tu entorno.",
+                description: "Plantas de lavanda fraganrosas rojas para añadir elegancia a tu jardín.Una hermosa suculenta ideal para tu espacio interiotes que traen un aroma relajante a tu entorno.",
             },
         ],
     },
@@ -69,7 +69,7 @@ const products = [
         name: "Rosa",
         category: "Flor, jardín",
         price: "10",
-        description: "Clásicas rosas rojas para añadir elegancia a tu jardín.",
+        description: "Clásicas rosas rojas para añadirrosas rojas para añadir elegancia a tu jardín.Una hermosa suculenta ideal para tu espacio interio elegancia a tu jardín.",
         url: "#",
     },
     {
@@ -78,7 +78,7 @@ const products = [
         name: "Lavanda",
         category: "Planta, aromática",
         price: "12",
-        description: "Plantas de lavanda fragantes que traen un aroma relajante a tu entorno.",
+        description: "Plantas de lavanda fragantes que trrosas rojas para añadir elegancia a tu jardín.Una hermosa suculenta ideal para tu espacio interioaen un aroma relajante a tu entorno.",
         url: "#",
     },
 ];

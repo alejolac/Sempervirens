@@ -13,18 +13,19 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Sempervirens/",
     element: <App />,
   },
   {
-    path: "products/",
+    path: "/Sempervirens/products/", 
     element: <AllProduct />,
   },
   {
-    path: "products/:productId",
+    path: "/Sempervirens/products/:productId",
     element: <Product />,
   },
 ]);
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

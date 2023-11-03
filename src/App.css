@@ -810,3 +810,25 @@ footer {
     margin-left: 20px; /* Añade espacio entre el logo y los enlaces en dispositivos móviles */
   }
 }
+
+
+/* All Products */
+
+.allproducts-container {
+  padding: 160px 0;
+}
+
+.allproducts-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .allproducts-head {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+}
