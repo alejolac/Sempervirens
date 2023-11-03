@@ -18,6 +18,8 @@ const ProductDisplay = ({ product }) => {
         product = useParams().productId
         product = Plants.find(producto => producto.id == product)
     }
+console.log(product);
+
     const [product1, setProduct1] = useState(product.image[0])
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [imgModal, setImgModal] = useState()

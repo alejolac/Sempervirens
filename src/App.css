@@ -772,7 +772,7 @@ footer {
 }
 
 .footer-social svg:hover {
-  color: #888; /* Cambiar el color a gris al pasar sobre el enlace */
+  color: #888; 
 }
 
 
@@ -815,7 +815,7 @@ footer {
 /* All Products */
 
 .allproducts-container {
-  padding: 160px 0;
+  padding: 180px 0 120px 0;
 }
 
 .allproducts-head {
@@ -831,4 +831,12 @@ footer {
     gap: 16px;
     align-items: center;
   }
+}
+
+.card-phone {
+  cursor: pointer;
+}
+
+.allproducts-phone-div {
+  width: 100%;
 }
