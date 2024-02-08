@@ -1,7 +1,11 @@
 /* NavBar */
 
+.navbar-container {
+    gap: 20px!important;
+}
+
 .imgLogo {
-    height: 80px;
+    height: 70px;
     margin-right: 20px;
 }
 

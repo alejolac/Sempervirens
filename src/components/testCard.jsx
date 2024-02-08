@@ -14,6 +14,8 @@ export default function ActionAreaCard({ img, title, text, price }) {
             setScreenWidth(window.innerWidth);
         }
 
+        //console.log(text);
+
         window.addEventListener('resize', handleResize);
 
         // Limpiar el evento al desmontar el componente
@@ -23,13 +25,23 @@ export default function ActionAreaCard({ img, title, text, price }) {
     }, []);
 
     function handleDescriptionValue() {
-        let newVal = text.split(" ");
-        if (newVal.length > 10) return (newVal.slice(0, 10).join(" "))
-        return text
+        const maxLength = 80; // Establece la longitud máxima deseada para la descripción
+        if (text.length > maxLength) {
+            return text.slice(0, maxLength) + '...'; // Si la longitud supera el máximo, trunca y agrega puntos suspensivos
+        }
+        return text;
+    }
+
+    function handleTitleValue() {
+        const maxLength = 50; // Establece la longitud máxima deseada para el título
+        if (title.length > maxLength) {
+            return title.slice(0, maxLength) + '...'; // Si la longitud supera el máximo, trunca y agrega puntos suspensivos
+        }
+        return title;
     }
 
     return (
-        <Card style={{margin: "0 auto"}} sx={{ maxWidth: 235 }}>
+        <Card style={{ margin: "0 auto" }} sx={{ maxWidth: 235 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
@@ -38,10 +50,20 @@ export default function ActionAreaCard({ img, title, text, price }) {
                     alt={title}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {title}
+                    <Typography
+                        className='text-card-title'
+                        gutterBottom
+                        variant="h6"
+                        component="div"
+                        style={{ height: 50, overflow: 'hidden' }} // Establece una altura fija para el título y maneja el desbordamiento
+                    >
+                        {handleTitleValue()}
                     </Typography>
-                    <Typography variant={screenWidth >= 965 ? "body1" : "body2"} color="text.secondary">
+                    <Typography
+                        className='text-card-desc'
+                        variant={screenWidth >= 965 ? "body1" : "body2"}
+                        color="text.secondary"
+                    >
                         {handleDescriptionValue()}
                     </Typography>
                     <Typography className='mt-2' variant="h5" color="black">
@@ -51,4 +73,6 @@ export default function ActionAreaCard({ img, title, text, price }) {
             </CardActionArea>
         </Card>
     );
+
+
 }

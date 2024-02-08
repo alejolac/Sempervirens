@@ -13,15 +13,15 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/Sempervirens/",
+    path: "/sempervirens/",
     element: <App />,
   },
   {
-    path: "/Sempervirens/products/", 
+    path: "/sempervirens/products/", 
     element: <AllProduct />,
   },
   {
-    path: "/Sempervirens/products/:productId",
+    path: "/sempervirens/products/:productId",
     element: <Product />,
   },
 ]);

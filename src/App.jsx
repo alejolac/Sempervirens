@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ExampleBar from './navBar.jsx';
-import Cards from './components/cards.jsx';
 import NavBar from './components/navBar.jsx';
 import HomeMain from './components/main.jsx';
 import AboutRow from './components/aboutRow.jsx';

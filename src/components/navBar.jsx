@@ -4,28 +4,23 @@ import Navbar from 'react-bootstrap/Navbar';
 import imgLogo from "../../public/imgLogo.png"
 import "./styles/navbar.css"
 import { Link } from "react-router-dom"
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
     return (
         <Navbar expand="lg" className='navbar-head'>
             <Container className='navbar-container'>
-                <Navbar.Brand href="#home"><img className='imgLogo' src={imgLogo} alt="" /></Navbar.Brand>
+                <NavLink to={"/sempervirens"}>
+                    <Navbar.Brand><img className='imgLogo' src={imgLogo} alt="" /></Navbar.Brand>
+                </NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Item href="#home">
-                            <Link to={"/"}>Inicio</Link>
-                        </Nav.Item>
-                        <Nav.Item href="#home">
-                            <Link to={"/"}>Inicio</Link>
-                        </Nav.Item>
-                        <Nav.Item href="#home">
-                            <Link to={"/"}>Inicio</Link>
-                        </Nav.Item>
-                        <Nav.Item href="#home">
-                            <Link to={"/"}>Inicio</Link>
-                        </Nav.Item>
+                        <NavLink to={"/sempervirens"} className="nav-link">Inicio</NavLink>
+                        <NavLink to={"/sempervirens/products"} className="nav-link">Productos</NavLink>
+                        <NavLink to={"/"} className="nav-link">Taller</NavLink>
+                        <NavLink to={"/"} className="nav-link">Nosotros</NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

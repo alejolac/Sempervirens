@@ -461,7 +461,7 @@ a {
   margin: 0 auto !important;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 1000px) {
@@ -509,6 +509,11 @@ a {
 
 .atropos-template-product {
   transition: 0.5s ease-in-out;
+}
+
+.atropos-template-product img {
+  border-radius: 10px;
+  border: 1px solid rgb(165, 164, 164) !important;
 }
 
 .atropos-template-product :hover {
@@ -564,7 +569,7 @@ a {
 }
 
 .template-product-price h5 {
-  font-size: 40px!important;
+  font-size: 26px!important;
   font-weight: 300!important;
 }
 
@@ -809,6 +814,16 @@ footer {
   .footer-nav {
     margin-left: 20px; /* Añade espacio entre el logo y los enlaces en dispositivos móviles */
   }
+}
+
+/* Card */
+
+.text-card-title {
+  font-size: 18px!important;
+}
+
+.text-card-desc {
+  font-size: 14px!important;
 }
 
 

@@ -18,8 +18,6 @@ const ProductDisplay = ({ product }) => {
         product = useParams().productId
         product = Plants.find(producto => producto.id == product)
     }
-console.log(product);
-
     const [product1, setProduct1] = useState(product.image[0])
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [imgModal, setImgModal] = useState()
@@ -74,6 +72,12 @@ console.log(product);
         if (newVal.length > 20) setDescriptionValue(newVal.slice(0, 14).join(" "))
     }
 
+    function handleDescriptionValuePC(val) {
+        let newVal = val.split(" ");
+        if (newVal.length > 60) return (newVal.slice(0, 60).join(" "))
+        return val
+    }
+
     function handleDescription() {
         if (descriptionState == 1) {
             setDescriptionState(0)
@@ -118,7 +122,7 @@ console.log(product);
                                         <AspectRatio key={index} ratio="1" sx={{ minWidth: 300 }} >
                                             <img
                                                 srcSet={`${img}?h=120&fit=crop&auto=format&dpr=2 2x`}
-                                                src={`../../public/${img}?h=120&fit=crop&auto=format`}
+                                                src={`../../public/productos/${img}?h=120&fit=crop&auto=format`}
                                                 alt={"imagen producto"}
                                             />
                                         </AspectRatio>
@@ -130,7 +134,9 @@ console.log(product);
                                 <p className="mb-0">{descriptionValue}{destcriptionSeeMore()}</p>
                             </div>
                             <div className="phone-product-button">
-                                <Button className="button-phone-shadow" style={{ backgroundColor: "#C8DBBD", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
+                                <a target="_blank" rel="noopener noreferrer" href={product.url}>
+                                    <Button className="button-phone-shadow" style={{ backgroundColor: "#C8DBBD", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
+                                </a>
                                 <p className="product-"> - Las compras se realizan por mercado libre - </p>
                             </div>
                             <div className="hr-product-phone">
@@ -144,7 +150,7 @@ console.log(product);
                                     {product.image.map((img, index) => {
                                         return (
                                             <div key={index} onClick={() => handleImage(img)} className={img == product1 ? 'img-lateral-content img-lateral-focus' : 'img-lateral-content'}>
-                                                <img src={`../../public/${img}`} alt={product.name} />
+                                                <img src={`../../public/productos/${img}`} alt={product.name} />
                                             </div>
                                         )
                                     })}
@@ -152,24 +158,25 @@ console.log(product);
                                 <div className="col-8 img-big">
                                     <div className="img-big-content">
                                         <Atropos className="atropos-template-product" onClick={() => handleImageClick(product1)}>
-                                            <img src={`../../public/${product1}`} alt="" />
+                                            <img src={`../../public/productos/${product1}`} alt="" />
                                         </Atropos>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-4 template-product-info">
-                                <div className={`template-product-name`}><Typography variant="h3">{product.name}</Typography></div>
+                                <div className={`template-product-name`}><Typography variant="h4">{product.name}</Typography></div>
                                 <div className={`template-product-category`}><Typography variant="subtitle1">{product.category}</Typography></div>
-                                <div className={`template-product-description`}><Typography variant="body1">{product.description}</Typography></div>
+                                <div style={{ whiteSpace: "pre-line" }} className={`template-product-description`}><Typography variant="body1">{product.description}</Typography></div>
                                 <div className={`template-product-price`}><Typography variant="h5">$ {product.price}</Typography></div>
                                 <div className="phone-product-button">
-                                    <Button className="button-phone-shadow" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
+                                    <a target="_blank" rel="noopener noreferrer" href={product.url}>
+                                        <Button className="button-phone-shadow" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
+                                    </a>
                                     <p className="product-"> - Las compras se realizan por mercado libre - </p>
                                 </div>
                             </div>
                         </div>
                     )}
-
                     <div className="back-green container-product">
                         <div className="productos-relacionados-title">
                             <h3>Productos Relacionados</h3>
@@ -190,7 +197,7 @@ console.log(product);
             {modalOpen && (
                 <div className="modal-overlay" onClick={handleCloseModal}>
                     <div className="modalIMG">
-                        <img className="large-image" src={`../../public/${imgModal}`} alt="" />
+                        <img className="large-image" src={`../../public/productos/${imgModal}`} alt="" />
                     </div>
                     <span className="close-modal-x">&times;</span>
                 </div>
