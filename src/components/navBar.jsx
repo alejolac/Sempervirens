@@ -19,7 +19,7 @@ const NavBar = () => {
                     <Nav className="me-auto">
                         <NavLink to={"/sempervirens"} className="nav-link">Inicio</NavLink>
                         <NavLink to={"/sempervirens/products"} className="nav-link">Productos</NavLink>
-                        <NavLink to={"/"} className="nav-link">Taller</NavLink>
+                        <NavLink to={"/sempervirens/taller"} className="nav-link">Taller</NavLink>
                         <NavLink to={"/"} className="nav-link">Nosotros</NavLink>
                     </Nav>
                 </Navbar.Collapse>

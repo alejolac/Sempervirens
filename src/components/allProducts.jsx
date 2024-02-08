@@ -28,7 +28,7 @@ const AllProduct = () => {
                                         <Card img={"../../public/productos/" + data.image[0]} text={data.description} price={data.price} title={data.name} />
                                     </Link >
                                 ) : (
-                                    <Link to={`/Sempervirens/products/${data.id}`}>
+                                    <Link to={`/sempervirens/products/${data.id}`}>
                                         <div className="allproducts-phone-div">
                                             <CardPhone data={data} />
                                         </div>
@@ -39,7 +39,6 @@ const AllProduct = () => {
 
                     ))}
                 </div>
-
             </main>
             <Footer />
         </>
