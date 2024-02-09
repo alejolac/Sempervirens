@@ -35,6 +35,10 @@ body {
   margin: 0 auto;
 }
 
+.btn-home-main:hover {
+  background-color: rgb(2, 88, 2)!important;
+}
+
 .text-phone {
   margin-left: 14px;
   text-align: left;

@@ -1,4 +1,5 @@
 import imgFondo from "../../public/imgFondo.jpg"
+import Button from "@mui/material/Button"
 
 const Main = () => {
     return (
@@ -14,7 +15,7 @@ const Main = () => {
                                 <h1 className="mt-2">¡Haz crecer un jardín, haz <br /> crecer tus sueños!</h1>
                                 <p className="my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim eos inventore aliquid ut
                                     quia repudiandae asperiores dolorem quae debitis voluptate </p>
-                                <button style={{width: "140px", height: "50px"}} className="btn btn-success btnMain" type="button">Contáctenos</button>
+                                <Button sx={{ alignSelf: "flex-start", backgroundColor: "green" }} className="btn-home-main" variant="contained">Contactenos</Button>
                             </div>
                         </div>
                     </div>
