@@ -5,7 +5,7 @@ const categories = () => {
     return (
 
         <div className="categoriesSection">
-            <div style={{ backgroundColor: "#01996D" }} className="backgroundFeatured">
+            <div style={{ backgroundColor: "#01402E" }} className="backgroundFeatured">
                 <div className="widthFeatured">
                     <div className="imgTitleFeatured">
                         <img src={img2} alt="" />

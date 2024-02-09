@@ -11,7 +11,7 @@
 
 .navbar {
     padding: 26px !important;
-    background-color: #C8DBBD !important;
+    background-color: var(--colorSecond)!important;
     border-bottom: 1px solid rgb(165, 164, 165);
 }
 

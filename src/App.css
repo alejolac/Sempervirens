@@ -5,6 +5,8 @@
   --font: font-family: 'Montserrat', sans-serif;
   --fontColor: #333;
   --fontColorLight: #fff;
+  --colorFirst: #01402E;
+  --colorSecond: #86BF5E
 }
 
 body {
@@ -14,7 +16,11 @@ body {
 }
 
 .btn-semp {
-  background-color: #DBE0A6 !important;
+  background-color: var(--colorSecond)!important;
+}
+
+.btn-aplicacion {
+  background-color: var(--colorSecond)!important;
 }
 
 .back-green {
@@ -716,7 +722,7 @@ a {
 /* Footer */
 footer {
   border-top: 1px solid rgb(165, 164, 165);
-  background-color: #c8dbbd; /* Color de fondo del footer */
+  background-color: var(--colorSecond); /* Color de fondo del footer */
   color: #000; /* Cambiar el color del texto a negro */
   padding: 40px; /* Espaciado interior del footer */
 }
