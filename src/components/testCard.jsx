@@ -14,10 +14,7 @@ export default function ActionAreaCard({ img, title, text, price }) {
             setScreenWidth(window.innerWidth);
         }
 
-        //console.log(text);
-
         window.addEventListener('resize', handleResize);
-
         // Limpiar el evento al desmontar el componente
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -25,9 +22,9 @@ export default function ActionAreaCard({ img, title, text, price }) {
     }, []);
 
     function handleDescriptionValue() {
-        const maxLength = 80; // Establece la longitud máxima deseada para la descripción
+        const maxLength = 80; 
         if (text.length > maxLength) {
-            return text.slice(0, maxLength) + '...'; // Si la longitud supera el máximo, trunca y agrega puntos suspensivos
+            return text.slice(0, maxLength) + '...'; 
         }
         return text;
     }
@@ -53,9 +50,9 @@ export default function ActionAreaCard({ img, title, text, price }) {
                     <Typography
                         className='text-card-title'
                         gutterBottom
-                        variant="h6"
+                        variant="h5"
                         component="div"
-                        style={{ height: 50, overflow: 'hidden' }} // Establece una altura fija para el título y maneja el desbordamiento
+                        style={{ height: 50, overflow: 'hidden' }} 
                     >
                         {handleTitleValue()}
                     </Typography>

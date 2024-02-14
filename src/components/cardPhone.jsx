@@ -19,7 +19,7 @@ export default function MediaControlCard({data}) {
       <CardMedia
         component="img"
         sx={{ width: 151 }}
-        image={data.image[0]}
+        image={"../../public/productos/" + data.image[0]}
         alt="Live from space album cover"
       />
       <Box sx={{ display: "flex", flexDirection: "column" }}>
