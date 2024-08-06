@@ -3,8 +3,8 @@ const products = [
         id: 1,
         image: ["huertaMiniNiños1.webp", "huertaMiniNiños2.webp", "huertaMiniNiños3.webp"],
         name: "Mini Kit De Huerta Orgánica Para Niños",
-        category: "MiniKit, Hortalizas",
         price: "150",
+        category: ["semillas", "kits"],
         description: `Una manera de acercar a los niños a la naturaleza, de una forma sencilla y en el hogar
         Incluye:
         
@@ -43,8 +43,8 @@ const products = [
         id: 2,
         image: ["cajonMadera3Divisiones0P1.webp", "cajonMadera3Divisiones0P2.webp", "cajonMadera3Divisiones0P3.webp", "cajonMadera3Divisiones0P4.webp"],
         name: "Cajón Para Plantas Con Tres Divisiones En Madera Rustica",
-        category: "Cajon, Madera",
         price: "450",
+        category: ["cajoncito"],
         description: `Cajón en madera rustica o multiplaca con tres divisiones...
         Ideal para aromáticas o florales con el tamaño justo para la cocina o ventana.
         Cada división cuenta con una pequeña pizarra para indicar el nombre de la planta o dejar un lindo mensaje.`,
@@ -77,8 +77,8 @@ const products = [
         id: 3,
         image: ["cajonMadera3Divisiones3P1.webp", "cajonMadera3Divisiones3P2.webp"],
         name: "Cajón Para Huerta Orgánica En Casa",
-        category: "Cajon, Plantas",
         price: "650",
+        category: ["cajoncito", "plantas"],
         description: `Cajón para cultivo de aromáticas, florales.
         Con tres divisiones y pizarra en cada una de ellas.
         ncluye 3 plantas y se acompaña con su ficha de cuidados.
@@ -112,8 +112,8 @@ const products = [
         id: 4,
         image: ["kitHuertaNiños1.webp", "kitHuertaNiños2.webp", "kitHuertaNiños3.webp"],
         name: "Kit De Huerta Orgánica Para Niños",
-        category: "Kit, Huerta, Niños",
         price: "650",
+        category: ["kits", "semillas"],
         description: `En Sempervirens nos preparamos para iniciar a los niños
         en la pasión por lo natural....
         Incluye:
@@ -154,8 +154,8 @@ const products = [
         id: 5,
         image: ["kitHuertaAromatica1.webp", "kitHuertaAromatica2.webp"],
         name: "Kit De Huerta - Hierbas Aromáticas",
-        category: "Kit, Huerta, Aromaticas",
         price: "400",
+        category: ["semillas", "plantas"],
         description: `Ideal para pequeños espacios. También gracias a los semilleros biodegradables,
         es posible, luego de su germinación, ubicarlas directo a tierra sin necesidad de
         transplantar, para lograr plantas más grandes, sin estropear sus raíces.
@@ -196,8 +196,8 @@ const products = [
         id: 6,
         image: ["plantaBulbosaHippeastrum1.webp", "plantaBulbosaHippeastrum2.webp", "plantaBulbosaHippeastrum3.webp"],
         name: "Planta Bulbosa Hippeastrum",
-        category: "Bulbosa, Plantas",
         price: "480",
+        category: ["semillas", "plantas"],
         description: `Hippeastrum papilio. Es una planta bulbosa muy resistente que en invierno - comienzos de primavera,
         nos regala una bellísima floración. Debemos ubicarla a media sombra o con el solcito de la mañana.
         `,
@@ -230,8 +230,8 @@ const products = [
         id: 7,
         image: ["palmeraChamaedorea1.webp", "palmeraChamaedorea2.webp"],
         name: "Palmera Chamaedorea",
-        category: "Palmera, Plantas",
         price: "420",
+        category: ["semillas", "plantas"],
         description: `Elegante palmera para interior. 
         Su altura aproximada ronda los 45-50 cm.
         `,
@@ -264,8 +264,8 @@ const products = [
         id: 8,
         image: ["palmeraChamaedorea1.webp", "palmeraChamaedorea2.webp"],
         name: "Palmera Chamaedorea",
-        category: "Palmera, Plantas",
         price: "420",
+        category: ["semillas", "plantas"],
         description: `Elegante palmera para interior. 
         Su altura aproximada ronda los 45-50 cm.
         `,
@@ -298,8 +298,8 @@ const products = [
         id: 9,
         image: ["palmeraChamaedorea1.webp", "palmeraChamaedorea2.webp"],
         name: "Palmera Chamaedorea",
-        category: "Palmera, Plantas",
         price: "420",
+        category: ["semillas", "plantas"],
         description: `Elegante palmera para interior. 
         Su altura aproximada ronda los 45-50 cm.
         `,
@@ -332,8 +332,8 @@ const products = [
         id: 10,
         image: ["palmeraChamaedorea1.webp", "palmeraChamaedorea2.webp"],
         name: "Palmera Chamaedorea",
-        category: "Palmera, Plantas",
         price: "420",
+        category: ["semillas", "plantas"],
         description: `Elegante palmera para interior. 
         Su altura aproximada ronda los 45-50 cm.
         `,
@@ -366,8 +366,8 @@ const products = [
         id: 11,
         image: ["palmeraChamaedorea1.webp", "palmeraChamaedorea2.webp"],
         name: "Palmera Chamaedorea",
-        category: "Palmera, Plantas",
         price: "420",
+        category: ["semillas", "plantas"],
         description: `Elegante palmera para interior. 
         Su altura aproximada ronda los 45-50 cm.
         `,

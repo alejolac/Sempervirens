@@ -6,6 +6,7 @@ import Footer from "./footer.jsx"
 import Nav from "./navBar.jsx"
 import { useParams } from "react-router-dom";
 import Plants from "../assets/plants.jsx"
+import { Link } from "react-router-dom"
 
 import AspectRatio from '@mui/joy/AspectRatio';
 import Box from '@mui/joy/Box';
@@ -121,7 +122,7 @@ const ProductDisplay = ({ product }) => {
                                     {product.image.map((img, index) => (
                                         <AspectRatio key={index} ratio="1" sx={{ minWidth: 300 }} >
                                             <img
-                                                srcSet={`${img}?h=120&fit=crop&auto=format&dpr=2 2x`}
+                                                srcSet={`../../public/productos/${img}?h=120&fit=crop&auto=format&dpr=2 2x`}
                                                 src={`../../public/productos/${img}?h=120&fit=crop&auto=format`}
                                                 alt={"imagen producto"}
                                             />
@@ -169,10 +170,16 @@ const ProductDisplay = ({ product }) => {
                                 <div style={{ whiteSpace: "pre-line" }} className={`template-product-description`}><Typography variant="body1">{product.description}</Typography></div>
                                 <div className={`template-product-price`}><Typography variant="h5">$ {product.price}</Typography></div>
                                 <div className="phone-product-button">
-                                    <a target="_blank" rel="noopener noreferrer" href={product.url}>
-                                        <Button className="button-phone-shadow" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=598099911202">
+                                        <Button className="button-phone-shadow" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Contactanos</Button>
                                     </a>
-                                    <p className="product-"> - Las compras se realizan por mercado libre - </p>
+                                    <p className="product-"> - Chat por Whatsapp para coordinar - </p>
+                                </div>
+                                <div style={{padding: "0 0 20px 0"}} className="phone-product-button">
+                                    <a target="_blank" rel="noopener noreferrer" href={product.url}>
+                                        <Button className="button-phone-shadow" style={{ backgroundColor: "rgb(227 207 0)", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
+                                    </a>
+                                    <p className="product-"> - Comprar por mercado libre - </p>
                                 </div>
                             </div>
                         </div>
@@ -186,9 +193,11 @@ const ProductDisplay = ({ product }) => {
                                 <Test key={relacionado.id} img={`../../public/${relacionado.image}`} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
                             ))}
                         </div>
-                        <div className="phone-releated-button">
-                            <Button className="button-phone-shadow button-releated-btn" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Ver todos</Button>
-                        </div>
+                        <Link to={"/sempervirens/products"}>
+                            <div className="phone-releated-button">
+                                <Button className="button-phone-shadow button-releated-btn" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Ver todos</Button>
+                            </div>
+                        </Link>
                     </div>
                     <Footer />
                 </div>

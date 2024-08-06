@@ -18,11 +18,15 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/sempervirens/products/", 
+    path: "/sempervirens/products/:category", 
     element: <AllProduct />,
   },
   {
-    path: "/sempervirens/products/:productId",
+    path: "/sempervirens/products", 
+    element: <AllProduct />,
+  },
+  {
+    path: "/sempervirens/products/item/:productId",
     element: <Product />,
   },
   {
