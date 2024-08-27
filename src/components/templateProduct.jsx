@@ -25,16 +25,15 @@ const ProductDisplay = ({ product }) => {
     const [descriptionState, setDescriptionState] = useState(2)
     const [descriptionValue, setDescriptionValue] = useState(product.description)
 
-    let backColor = screenWidth <= 980 ? "pt-120 flex-product phone-product" : "pt-120 flex-product"
+    let backColor = screenWidth <= 980 ? "pt-120 flex-product phone-product" : "pt-60 flex-product"
+
+    window.scrollTo(0, 0);
 
     useEffect(() => {
         const handleResize = () => {
             setScreenWidth(window.innerWidth);
         };
-
         window.addEventListener('resize', handleResize);
-
-        window.scrollTo(0, 0);
 
         // Description
         function description(val) {
@@ -103,7 +102,7 @@ const ProductDisplay = ({ product }) => {
                     {screenWidth <= 980 ? (
                         <div className="back-green-phone-head">
                             <div className="text-phone phone-name"><h1>{product.name}</h1></div>
-                            <div className="text-phone phone-category"><p className="mb-0">{product.category}</p></div>
+                            <div className="text-phone phone-category"><p className="mb-0">{product.category.map((e, index) => index == product.category.length-1 ? e : `${e},  `)}</p></div>
                             <div className="back-green-phone">
                                 <Box className="product-image-phone"
                                     sx={{
@@ -135,8 +134,14 @@ const ProductDisplay = ({ product }) => {
                                 <p className="mb-0">{descriptionValue}{destcriptionSeeMore()}</p>
                             </div>
                             <div className="phone-product-button">
+                                <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=598099911202">
+                                    <Button className="button-phone-shadow" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Contactanos</Button>
+                                </a>
+                                <p className="product-"> - Las compras se realizan por mercado libre - </p>
+                            </div>
+                            <div className="phone-product-button">
                                 <a target="_blank" rel="noopener noreferrer" href={product.url}>
-                                    <Button className="button-phone-shadow" style={{ backgroundColor: "#C8DBBD", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
+                                    <Button className="button-phone-shadow" style={{ backgroundColor: "rgb(227 207 0)", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
                                 </a>
                                 <p className="product-"> - Las compras se realizan por mercado libre - </p>
                             </div>
@@ -166,7 +171,7 @@ const ProductDisplay = ({ product }) => {
                             </div>
                             <div className="col-4 template-product-info">
                                 <div className={`template-product-name`}><Typography variant="h4">{product.name}</Typography></div>
-                                <div className={`template-product-category`}><Typography variant="subtitle1">{product.category}</Typography></div>
+                                <div className={`template-product-category`}><Typography variant="subtitle1">{product.category.map((e, index) => index == product.category.length-1 ? e : `${e},  `)}</Typography></div>
                                 <div style={{ whiteSpace: "pre-line" }} className={`template-product-description`}><Typography variant="body1">{product.description}</Typography></div>
                                 <div className={`template-product-price`}><Typography variant="h5">$ {product.price}</Typography></div>
                                 <div className="phone-product-button">
@@ -175,7 +180,7 @@ const ProductDisplay = ({ product }) => {
                                     </a>
                                     <p className="product-"> - Chat por Whatsapp para coordinar - </p>
                                 </div>
-                                <div style={{padding: "0 0 20px 0"}} className="phone-product-button">
+                                <div style={{ padding: "0 0 20px 0" }} className="phone-product-button">
                                     <a target="_blank" rel="noopener noreferrer" href={product.url}>
                                         <Button className="button-phone-shadow" style={{ backgroundColor: "rgb(227 207 0)", width: "100%" }} size="large" variant="contained">Ir a comprar</Button>
                                     </a>
@@ -190,7 +195,9 @@ const ProductDisplay = ({ product }) => {
                         </div>
                         <div className="productos-relacionados">
                             {product.relacionados.map((relacionado, index) => (
-                                <Test key={relacionado.id} img={`../../public/${relacionado.image}`} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
+                                <Link key={relacionado.id} to={`/sempervirens/products/item/${relacionado.id}`}>
+                                    <Test img={`../../public/${relacionado.image}`} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
+                                </Link>
                             ))}
                         </div>
                         <Link to={"/sempervirens/products"}>

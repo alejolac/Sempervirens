@@ -473,7 +473,7 @@ a {
 
 .container-product {
   max-width: 1450px;
-  margin: 0 auto !important;
+  margin: 20px auto !important;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   padding-bottom: 40px;
