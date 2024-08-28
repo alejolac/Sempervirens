@@ -9,6 +9,7 @@ import BestCategories from './components/bestCategories.jsx';
 import ViewBlog from "./components/viewBlog.jsx";
 import Template from "./components/templateProduct.jsx";
 import Footer from "./components/footer.jsx";
+import Taller from "./components/tallerHome.jsx";
 
 import Products from "./assets/plants.jsx"
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <AboutRow />
           <ProductosMain />
           <BestCategories />
+          <Taller />
           <ViewBlog />
           <Footer />
         </>
