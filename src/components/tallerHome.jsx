@@ -5,11 +5,11 @@ const Blog = () => {
     return (
         <div className="container back-green my-5">
             <Title txt="Nuestro Taller" />
-            <div className="row">
-                <div className="taller-home-item col-lg-4">
+            <div className="row justify-content-center">
+                <div className="taller-home-item col-lg-5">
                     hola mundo
                 </div>
-                <div className="taller-home-item taller-home-list col-lg-4">
+                <div className="taller-home-item taller-home-list col-lg-5">
                     <div className="">
                         hello
                     </div>

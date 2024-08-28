@@ -877,3 +877,8 @@ footer {
 }
 
 /* TALLER HOME */
+
+.taller-home-item {
+  display: flex;
+  justify-content: center;
+}
