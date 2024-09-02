@@ -881,4 +881,17 @@ footer {
 .taller-home-item {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.taller-home-elem {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.taller-home-info {
+  display: flex;
+  gap: 20px;
 }
