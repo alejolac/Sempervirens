@@ -2,13 +2,13 @@ import imgLogo from "../../public/blogHome_1.jpg"
 import Title from "./titleSection.jsx"
 import EastIcon from '@mui/icons-material/East';
 
-const Blog = () => {
+const Taller = () => {
     return (
         <div className="container back-green my-5">
             <Title txt="Nuestro Taller" />
             <div className="row taller-home-head">
                 <div className="taller-home-item col-lg-5">
-                    <div>
+                    <div className="mt-2">
                         <span style={{
                             fontSize: "36px",
                             fontWeight: "500",
@@ -73,4 +73,4 @@ const Blog = () => {
     )
 }
 
-export default Blog
+export default Taller
