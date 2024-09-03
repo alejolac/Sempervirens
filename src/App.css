@@ -16,11 +16,11 @@ body {
 }
 
 .btn-semp {
-  background-color: var(--colorSecond)!important;
+  background-color: var(--colorSecond) !important;
 }
 
 .btn-aplicacion {
-  background-color: var(--colorSecond)!important;
+  background-color: var(--colorSecond) !important;
 }
 
 .back-green {
@@ -42,7 +42,7 @@ body {
 }
 
 .btn-home-main:hover {
-  background-color: rgb(2, 88, 2)!important;
+  background-color: rgb(2, 88, 2) !important;
 }
 
 .text-phone {
@@ -91,7 +91,7 @@ img {
 
 @media (max-width: 985px) {
   .pt-120 {
-    padding-top: 120px!important;
+    padding-top: 120px !important;
   }
 }
 
@@ -99,7 +99,7 @@ img {
 
 @media (min-width: 965px) {
   .btn-home {
-    width: 268px!important;
+    width: 268px !important;
     margin: 0 auto;
   }
 }
@@ -327,7 +327,7 @@ img {
     width: 40% !important;
   }
 
-  .cat > a {
+  .cat>a {
     display: flex !important;
     justify-content: center;
   }
@@ -410,11 +410,11 @@ a {
   }
 
   .flex-product {
-    gap: 0px!important;
+    gap: 0px !important;
   }
 
   .productos-relacionados {
-    gap: 40px!important;
+    gap: 40px !important;
   }
 }
 
@@ -548,14 +548,14 @@ a {
 }
 
 @media(max-width: 675px) {
-  .button-releated-btn{
-    margin: 20px auto!important;
+  .button-releated-btn {
+    margin: 20px auto !important;
   }
 }
 
 @media(max-width: 1080px) {
   .phone-releated-button {
-    justify-content: center!important;
+    justify-content: center !important;
   }
 }
 
@@ -566,12 +566,12 @@ a {
 }
 
 .button-releated-btn {
-  max-width: 265px!important;
+  max-width: 265px !important;
 }
 
 .template-product-info {
   padding: 0px 40px;
-  border: 1px solid rgba(0,0,0,.1);
+  border: 1px solid rgba(0, 0, 0, .1);
   border-radius: 16px;
 }
 
@@ -580,24 +580,24 @@ a {
 }
 
 .template-product-category {
-  padding-top: 0!important;
+  padding-top: 0 !important;
 }
 
 .template-product-price h5 {
-  font-size: 26px!important;
-  font-weight: 300!important;
+  font-size: 26px !important;
+  font-weight: 300 !important;
 }
 
 /* Template Product Phone */
 
 .product-image-phone {
-  padding: 20px 20px 14px 20px!important;
+  padding: 20px 20px 14px 20px !important;
 }
 
 .phone-name {
   margin-top: 20px;
   color: rgb(0, 0, 0);
-  font-weight: 400!important;
+  font-weight: 400 !important;
 }
 
 .phone-name h1 {
@@ -611,11 +611,12 @@ a {
 
 .price-phone {
   font-size: 32px;
-  color: rgba(0, 0, 0, 0.9);;
+  color: rgba(0, 0, 0, 0.9);
+  ;
 }
 
 .price-phone span {
-  font-weight: 300!important;
+  font-weight: 300 !important;
   color: rgb(0, 0, 0);
 }
 
@@ -641,10 +642,10 @@ a {
 }
 
 .button-phone-shadow {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px!important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
 }
 
-.phone-product-button p{
+.phone-product-button p {
   text-align: center;
   margin-top: 6px;
   font-size: 14px;
@@ -726,30 +727,41 @@ a {
 /* Footer */
 footer {
   border-top: 1px solid rgb(165, 164, 165);
-  background-color: var(--colorSecond); /* Color de fondo del footer */
-  color: #000; /* Cambiar el color del texto a negro */
-  padding: 40px; /* Espaciado interior del footer */
+  background-color: var(--colorSecond);
+  /* Color de fondo del footer */
+  color: #000;
+  /* Cambiar el color del texto a negro */
+  padding: 40px;
+  /* Espaciado interior del footer */
 }
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  flex-wrap: wrap;
+  /* Permite que los elementos se envuelvan en pantallas pequeñas */
   justify-content: center;
-  gap: 120px; /* Aumentar el espacio entre elementos a 120px en la versión de escritorio */
+  gap: 120px;
+  /* Aumentar el espacio entre elementos a 120px en la versión de escritorio */
   align-items: center;
 }
 
 .footer-logo img {
-  width: 160px; /* Aumentar el tamaño del logo en la versión de escritorio */
+  width: 160px;
+  /* Aumentar el tamaño del logo en la versión de escritorio */
   height: auto;
-  margin-bottom: 10px; /* Espaciado inferior para dispositivos móviles */
-  cursor: pointer; /* Cambiar el cursor al pasar sobre el logo */
+  margin-bottom: 10px;
+  /* Espaciado inferior para dispositivos móviles */
+  cursor: pointer;
+  /* Cambiar el cursor al pasar sobre el logo */
 }
 
 .footer-logo img:hover {
-  opacity: 0.8; /* Cambiar la opacidad al pasar sobre el logo */
-  transform: translateY(-5px); /* Elevar ligeramente el elemento al pasar sobre él */
-  transition: transform 0.4s ease-in-out; /* Agregar transición suave al efecto */
+  opacity: 0.8;
+  /* Cambiar la opacidad al pasar sobre el logo */
+  transform: translateY(-5px);
+  /* Elevar ligeramente el elemento al pasar sobre él */
+  transition: transform 0.4s ease-in-out;
+  /* Agregar transición suave al efecto */
 }
 
 .footer-nav ul {
@@ -765,18 +777,22 @@ footer {
 
 .footer-nav a {
   text-decoration: none;
-  font-size: 16px!important;
-  color: #000; /* Cambiar el color del texto de enlaces a negro */
+  font-size: 16px !important;
+  color: #000;
+  /* Cambiar el color del texto de enlaces a negro */
 }
 
 .footer-nav li:hover {
-  color: #888; /* Cambiar el color a gris al pasar sobre el enlace */
-  transform: translateY(-5px); /* Elevar ligeramente el enlace al pasar sobre él */
+  color: #888;
+  /* Cambiar el color a gris al pasar sobre el enlace */
+  transform: translateY(-5px);
+  /* Elevar ligeramente el enlace al pasar sobre él */
 }
 
 .footer-social a {
   margin: 0 10px;
-  color: #000; /* Cambiar el color de los iconos de redes sociales a negro */
+  color: #000;
+  /* Cambiar el color de los iconos de redes sociales a negro */
 }
 
 .footer-social li {
@@ -791,7 +807,7 @@ footer {
 }
 
 .footer-social svg:hover {
-  color: #6b6b6b; 
+  color: #6b6b6b;
 }
 
 
@@ -803,7 +819,7 @@ footer {
 /* Estilos específicos para dispositivos móviles */
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 30px;
   }
 
@@ -816,28 +832,32 @@ footer {
 
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: row; /* Cambia a una disposición horizontal en dispositivos móviles */
+    flex-direction: row;
+    /* Cambia a una disposición horizontal en dispositivos móviles */
     align-items: center;
   }
 
   .footer-logo {
-    width: 120px; /* Aumentar el tamaño del logo en la versión de escritorio */
-    margin-bottom: 0; /* Elimina el espacio inferior en dispositivos móviles */
+    width: 120px;
+    /* Aumentar el tamaño del logo en la versión de escritorio */
+    margin-bottom: 0;
+    /* Elimina el espacio inferior en dispositivos móviles */
   }
 
   .footer-nav {
-    margin-left: 20px; /* Añade espacio entre el logo y los enlaces en dispositivos móviles */
+    margin-left: 20px;
+    /* Añade espacio entre el logo y los enlaces en dispositivos móviles */
   }
 }
 
 /* Card */
 
 .text-card-title {
-  font-size: 18px!important;
+  font-size: 18px !important;
 }
 
 .text-card-desc {
-  font-size: 14px!important;
+  font-size: 14px !important;
 }
 
 
@@ -878,20 +898,71 @@ footer {
 
 /* TALLER HOME */
 
+.taller-home-head {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
 .taller-home-item {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 22px;
+  gap: 20px;
 }
 
 .taller-home-elem {
   display: flex;
   align-items: center;
   gap: 30px;
+  padding: 28px 16px;
+  transition: 0.4s ease-in-out;
+}
+
+.taller-home-elem:hover {
+  box-shadow: 6px 9px 46px rgba(51, 51, 51, 0.2);
+}
+
+.taller-home-elem:hover .taller-home-index{
+  color: #01402E;
 }
 
 .taller-home-info {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 14px;
+  transition: 0.2s ease-in-out;
+}
+
+.taller-home-info:hover {
+  cursor: pointer;
+  color: #015a10 !important;
+}
+
+.taller-home-info:hover div {
+  transform: translateX(10px);
+}
+
+.taller-home-info span {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.taller-home-index {
+  font-size: 54px;
+  color: rgb(125, 125, 125);
+  transition: 0.2s ease-in-out;
+}
+
+.taller-home-sec-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.taller-home-title-sec {
+  font-weight: 500;
+  font-size: 20px;
 }
