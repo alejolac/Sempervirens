@@ -2,7 +2,7 @@ import img from "../../public/imgCategoriaTest.png"
 import img2 from "../../public/categoriaPopularTitle.png"
 import kit from "/category-kit.png"
 import plant from "/category-plant.png"
-import seed from "/category-seed.png"
+import terrario from "/category-terrario3.png"
 import cajon from "/category-cajon.png"
 import { Link } from "react-router-dom"
 
@@ -24,15 +24,7 @@ const Categories = () => {
                                     <div className="text-center">
                                         <img src={plant} alt="" />
                                     </div>
-                                    <h4 style={{textDecoration: "none", color:"black"}} className="text-center mt-2 titleCat">Plantas</h4>
-                                </div>
-                            </Link>
-                            <Link to={"/sempervirens/products/semillas"}>
-                                <div className="categoryIndividual" style={{ width: "160px" }}>
-                                    <div className="text-center">
-                                        <img src={seed} alt="" />
-                                    </div>
-                                    <h4 style={{textDecoration: "none", color: "black"}} className="text-center mt-2 titleCat">Semillas</h4>
+                                    <h4 style={{ textDecoration: "none", color: "black" }} className="text-center mt-2 titleCat">Plantas</h4>
                                 </div>
                             </Link>
                             <Link to={"/sempervirens/products/kits"}>
@@ -40,7 +32,7 @@ const Categories = () => {
                                     <div className="text-center">
                                         <img src={kit} alt="" />
                                     </div>
-                                    <h4 style={{textDecoration: "none", color: "black"}} className="text-center mt-2 titleCat">Kits</h4>
+                                    <h4 style={{ textDecoration: "none", color: "black" }} className="text-center mt-2 titleCat">Kits</h4>
                                 </div>
                             </Link>
                             <Link to={"/sempervirens/products/cajoncito"}>
@@ -48,7 +40,15 @@ const Categories = () => {
                                     <div className="text-center">
                                         <img src={cajon} alt="" />
                                     </div>
-                                    <h4 style={{textDecoration: "none", color: "black"}} className="text-center mt-2 titleCat">Cajoncitos</h4>
+                                    <h4 style={{ textDecoration: "none", color: "black" }} className="text-center mt-2 titleCat">Cajoncitos</h4>
+                                </div>
+                            </Link>
+                            <Link to={"/sempervirens/products/semillas"}>
+                                <div className="categoryIndividual" style={{ width: "160px" }}>
+                                    <div className="text-center">
+                                        <img src={terrario} alt="" />
+                                    </div>
+                                    <h4 style={{ textDecoration: "none", color: "black" }} className="text-center mt-2 titleCat">Terrarios</h4>
                                 </div>
                             </Link>
                         </div>
