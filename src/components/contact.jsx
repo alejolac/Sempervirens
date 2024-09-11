@@ -1,6 +1,7 @@
 import Footer from "./footer.jsx"
 import NavBar from "./navBar.jsx"
 import Title from "./titleSection.jsx"
+import Form from "./form.jsx"
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ShareIcon from '@mui/icons-material/Share';
@@ -8,6 +9,10 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+
+
+/* REACT MUI */
+import TextField from '@mui/material/TextField';
 
 const Contact = () => {
     return (
@@ -77,6 +82,9 @@ const Contact = () => {
                         <div className="contact-form-title">
                             <p>Estamos a las ordenes</p>
                             <h2>Le enviaremos un mail cuanto antes</h2>
+                        </div>
+                        <div>
+                            <Form />
                         </div>
                     </div>
                 </div>

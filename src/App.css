@@ -1010,3 +1010,16 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
+/* FORM CONTACT */
+
+.contact-form-head {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-form-data {
+  display: flex;
+  gap: 60px;
+}
+
