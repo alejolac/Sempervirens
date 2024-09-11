@@ -15,11 +15,11 @@ const Footer = () => {
                     </Link>
                 </div>
                 <div className="footer-nav">
-                    <ul>
+                    <ul >
                         <li><Link to="/sempervirens">Inicio</Link></li>
                         <li><Link to="/sempervirens/products">Productos</Link></li>
                         <li><Link to="/sempervirens/taller">Taller</Link></li>
-                        <li><Link to="/sempervirens/nosotros">Nosotros</Link></li>
+                        <li><Link to="/sempervirens/contacto">Contacto</Link></li>
                     </ul>
                 </div>
                 <div className="footer-social">
@@ -37,7 +37,6 @@ const Footer = () => {
                             <ChatIcon style={{fontSize: "20px"}}/>
                         </a>
                     </div>
-                    
                     <p>Correo electrónico: sempervirens@sempervirens.com</p>
                 </div>
             </div>

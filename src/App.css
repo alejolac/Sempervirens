@@ -385,7 +385,7 @@ a {
 }
 
 .blogHome img:hover {
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 
 @media (max-width: 990px) {
@@ -737,6 +737,7 @@ footer {
   /* Espaciado inferior para dispositivos móviles */
   cursor: pointer;
   /* Cambiar el cursor al pasar sobre el logo */
+  transition: transform 0.4s ease-in-out;
 }
 
 .footer-logo img:hover {
@@ -744,8 +745,7 @@ footer {
   /* Cambiar la opacidad al pasar sobre el logo */
   transform: translateY(-5px);
   /* Elevar ligeramente el elemento al pasar sobre él */
-  transition: transform 0.4s ease-in-out;
-  /* Agregar transición suave al efecto */
+
 }
 
 .footer-nav ul {
@@ -783,15 +783,14 @@ footer {
   font-size: 24px;
 }
 
-
 .footer-social svg {
   width: 1.5em;
   height: 1.5em;
-  transition: 0.4s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .footer-social svg:hover {
-  color: #6b6b6b;
+  color: #414141;
 }
 
 
@@ -950,3 +949,64 @@ footer {
   font-weight: 500;
   font-size: 20px;
 }
+
+/* Contact Page */
+
+.contact-subtitle {
+  text-align: center;
+  color: #7d7d7d;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact-subtitle span {
+  color: #01402E;
+  font-weight: 500;
+}
+
+.contact-info-head {
+  margin-top: 60px !important;
+}
+
+.contact-info-subhead {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.contact-info-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-data-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.contact-info-data-social {
+  display: flex;
+  gap: 14px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-info-data-wp:hover {
+  color: #2E7D32;
+}
+
+.contact-info-data-fb:hover {
+  color: #1877F2;
+}
+
+.contact-info-data-ig:hover {
+  color: #E47A5B;
+}
+
+.contact-info-data-ig:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
