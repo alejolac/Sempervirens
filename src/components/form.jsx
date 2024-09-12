@@ -20,7 +20,6 @@ const MyForm = () => {
 
     // Maneja el cambio de los campos
     const handleChange = (e) => {
-        console.log(e.target);
         const { name, value } = e.target;
         setFormValues({
             ...formValues,
@@ -64,11 +63,33 @@ const MyForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
+            sendEmail()
             console.log('Formulario enviado:', formValues);
         } else {
             console.log('Errores en el formulario');
         }
     };
+
+    async function sendEmail() {
+        try {
+            const response = await fetch('https://sempervirens-ju6o5tvu9-alejolacs-projects.vercel.app/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    to: 'alejobuc@gmail.com.com',
+                    from: 'sender@example.com',
+                    subject: formValues.asunto,
+                    text: `Nombre: ${formValues.name}, Correo de contacto: ${formValues.email} y Descripcion: ${formValues.descripcion}`,
+                }),
+            });
+            const data = await response.json();
+            console.log('Email sent successfully:', data);
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
+    }
 
     return (
         <form onSubmit={handleSubmit}>
@@ -130,7 +151,6 @@ const MyForm = () => {
                     Enviar
                 </Button>
             </div>
-
         </form>
     );
 };
