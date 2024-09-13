@@ -81,7 +81,7 @@ const Contact = () => {
                     <div className="contact-form">
                         <div className="contact-form-title">
                             <h2>Envíanos un Mensaje</h2>
-                            <p>Queremos saber de ti. Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+                            <p>Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
                         </div>
                         <Form />
                     </div>
