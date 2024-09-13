@@ -1023,3 +1023,13 @@ footer {
   gap: 60px;
 }
 
+.alert-contact {
+  position: fixed;
+  z-index: 9999;
+  width: 80%;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: 80%;
+  margin: 0 auto;  
+}

@@ -18,7 +18,7 @@ const allowCors = fn => async (req, res) => {
 };
 
 const handler = async (req, res) => {
-    if (req.method === 'POST') {
+    if (req.method == 'POST') {
         const fetchResponse = await fetch('https://api.resend.com/emails', {
             method: 'POST',
             headers: {
@@ -28,8 +28,8 @@ const handler = async (req, res) => {
             body: JSON.stringify({
                 from: 'Acme <onboarding@resend.dev>',
                 to: ['alejobuc@gmail.com'],
-                subject: 'hello world',
-                html: '<strong>it works!</strong>',
+                subject: req.body.subject,
+                html: req.body.text,
             }),
         });
 
@@ -44,4 +44,4 @@ const handler = async (req, res) => {
     }
 };
 
-module.exports = allowCors(handler);
+export default allowCors(handler);

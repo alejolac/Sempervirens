@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
 
+// URL POSTA
+/* https://sempervirens.vercel.app */
+
 const MyForm = () => {
     // Estado para los valores del formulario
     const [formValues, setFormValues] = useState({
@@ -17,6 +20,15 @@ const MyForm = () => {
         asunto: '',
         descripcion: '',
     });
+
+    const cleanValues = () => {
+        setFormValues({
+            name: '',
+            email: '',
+            asunto: '',
+            descripcion: '',
+        })
+    }
 
     // Maneja el cambio de los campos
     const handleChange = (e) => {
@@ -64,6 +76,7 @@ const MyForm = () => {
         e.preventDefault();
         if (validateForm()) {
             sendEmail()
+            cleanValues()
             console.log('Formulario enviado:', formValues);
         } else {
             console.log('Errores en el formulario');
@@ -72,20 +85,29 @@ const MyForm = () => {
 
     async function sendEmail() {
         try {
-            const response = await fetch('https://sempervirens-ju6o5tvu9-alejolacs-projects.vercel.app/api/send-email', {
+            const response = await fetch('https://sempervirens.vercel.app/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    to: 'alejobuc@gmail.com.com',
+                    to: 'alejobuc@gmail.com',
                     from: 'sender@example.com',
                     subject: formValues.asunto,
                     text: `Nombre: ${formValues.name}, Correo de contacto: ${formValues.email} y Descripcion: ${formValues.descripcion}`,
                 }),
             });
-            const data = await response.json();
-            console.log('Email sent successfully:', data);
+            if (!response.ok) {
+                throw new Error(`Error: ${response.statusText}`);
+            }
+
+            const text = await response.text(); // Lee el contenido como texto
+            if (text) {
+                const data = JSON.parse(text); // Intenta convertir a JSON
+                console.log('Email sent successfully:', data);
+            } else {
+                console.log('No response body, email sent successfully');
+            }
         } catch (error) {
             console.error('Error sending email:', error);
         }

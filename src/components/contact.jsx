@@ -72,7 +72,7 @@ const Contact = () => {
                                 </div>
                                 <a href="/" target="_blank" rel="noopener noreferrer" style={{ color: "black" }}>
                                     <div className="contact-info-data-social">
-                                        <p> sempervirens@sempervirens.com</p> <AlternateEmailIcon />
+                                        <p> sempervirens@sempervirens.com</p>
                                     </div>
                                 </a>
                             </div>
@@ -83,9 +83,7 @@ const Contact = () => {
                             <p>Estamos a las ordenes</p>
                             <h2>Le enviaremos un mail cuanto antes</h2>
                         </div>
-                        <div>
-                            <Form />
-                        </div>
+                        <Form />
                     </div>
                 </div>
             </main>
