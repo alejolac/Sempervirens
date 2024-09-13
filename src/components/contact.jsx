@@ -25,7 +25,7 @@ const Contact = () => {
                         <p className="contact-subtitle">Nos encantaría saber de ti. Contáctanos para conocer más sobre nuestros <span>Productos</span> y <span>Talleres</span>, <br /> o para resolver cualquier duda que tengas</p>
                     </div>
                     <div className="row contact-info-head">
-                        <div className="col-4 contact-info-subhead">
+                        <div className="col-12 col-md-4 contact-info-subhead">
                             <div className="contact-info-icon">
                                 <PhoneIcon color="success" fontSize="large" />
                             </div>
@@ -40,7 +40,7 @@ const Contact = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="col-4 contact-info-subhead">
+                        <div className="col-12 col-md-4 contact-info-subhead">
                             <div className="contact-info-icon">
                                 <ShareIcon color="success" fontSize="large" />
                             </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4 contact-info-subhead">
+                        <div className="col-12 col-md-4 contact-info-subhead">
                             <div className="contact-info-icon">
                                 <EmailIcon color="success" fontSize="large" />
                             </div>

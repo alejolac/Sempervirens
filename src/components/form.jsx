@@ -29,29 +29,29 @@ const MyForm = () => {
         text: "",
         vertical: 'bottom',
         horizontal: 'right',
-      });
+    });
 
     const { vertical, horizontal, open, text } = state;
 
     const handleClick = (newState) => {
-    console.log(newState);
-    setState({ ...newState, open: true });
+        console.log(newState);
+        setState({ ...newState, open: true });
     };
 
     const handleClose = () => {
-    setState({ ...state, open: false });
+        setState({ ...state, open: false });
     };
 
     const action = (
-          <IconButton
+        <IconButton
             size="small"
             aria-label="close"
             color="inherit"
             onClick={handleClose}
-          >
+        >
             <CloseIcon fontSize="small" />
-          </IconButton>
-      );
+        </IconButton>
+    );
 
     const cleanValues = () => {
         setFormValues({
@@ -107,7 +107,7 @@ const MyForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            sendEmail()            
+            sendEmail()
             cleanValues()
             console.log('Formulario enviado:', formValues);
         } else {
@@ -137,13 +137,13 @@ const MyForm = () => {
             if (text) {
                 const data = JSON.parse(text); // Intenta convertir a JSON
                 console.log('Email sent successfully:', data);
-                handleClick({vertical: 'bottom', horizontal: 'right', text: "Datos Enviados Correctamente"})
+                handleClick({ vertical: 'bottom', horizontal: 'right', text: "Datos Enviados Correctamente" })
             } else {
                 console.log('No response body, email sent successfully');
             }
         } catch (error) {
             console.error('Error sending email:', error);
-            handleClick({vertical: 'bottom', horizontal: 'right', text: "Hubo un error al enviar los datos, intente mas tarde"})
+            handleClick({ vertical: 'bottom', horizontal: 'right', text: "Hubo un error al enviar los datos, intente mas tarde" })
         }
     }
 
