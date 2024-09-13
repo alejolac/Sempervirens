@@ -80,8 +80,8 @@ const Contact = () => {
                     </div>
                     <div className="contact-form">
                         <div className="contact-form-title">
-                            <p>Estamos a las ordenes</p>
-                            <h2>Le enviaremos un mail cuanto antes</h2>
+                            <h2>Envíanos un Mensaje</h2>
+                            <p>Queremos saber de ti. Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
                         </div>
                         <Form />
                     </div>

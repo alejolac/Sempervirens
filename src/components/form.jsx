@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 // URL POSTA
 /* https://sempervirens.vercel.app */
@@ -20,6 +23,35 @@ const MyForm = () => {
         asunto: '',
         descripcion: '',
     });
+
+    const [state, setState] = useState({
+        open: false,
+        text: "",
+        vertical: 'bottom',
+        horizontal: 'right',
+      });
+
+    const { vertical, horizontal, open, text } = state;
+
+    const handleClick = (newState) => {
+    console.log(newState);
+    setState({ ...newState, open: true });
+    };
+
+    const handleClose = () => {
+    setState({ ...state, open: false });
+    };
+
+    const action = (
+          <IconButton
+            size="small"
+            aria-label="close"
+            color="inherit"
+            onClick={handleClose}
+          >
+            <CloseIcon fontSize="small" />
+          </IconButton>
+      );
 
     const cleanValues = () => {
         setFormValues({
@@ -75,7 +107,7 @@ const MyForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            sendEmail()
+            sendEmail()            
             cleanValues()
             console.log('Formulario enviado:', formValues);
         } else {
@@ -105,11 +137,13 @@ const MyForm = () => {
             if (text) {
                 const data = JSON.parse(text); // Intenta convertir a JSON
                 console.log('Email sent successfully:', data);
+                handleClick({vertical: 'bottom', horizontal: 'right', text: "Datos Enviados Correctamente"})
             } else {
                 console.log('No response body, email sent successfully');
             }
         } catch (error) {
             console.error('Error sending email:', error);
+            handleClick({vertical: 'bottom', horizontal: 'right', text: "Hubo un error al enviar los datos, intente mas tarde"})
         }
     }
 
@@ -173,6 +207,16 @@ const MyForm = () => {
                     Enviar
                 </Button>
             </div>
+            <Snackbar
+                anchorOrigin={{ vertical, horizontal }}
+                open={open}
+                onClose={handleClose}
+                message={text}
+                key={vertical + horizontal}
+                autoHideDuration={3200}
+                transitionComponent="SlideTransition"
+                action={action}
+            />
         </form>
     );
 };
