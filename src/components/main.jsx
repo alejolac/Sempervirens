@@ -16,7 +16,7 @@ const Main = () => {
                                 <h1 className="mt-2">¡Haz crecer un jardín, haz <br /> crecer tus sueños!</h1>
                                 <p className="my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim eos inventore aliquid ut
                                     quia repudiandae asperiores dolorem quae debitis voluptate </p>
-                                <Link to={"/sempervirens/contacto"}>
+                                <Link to={"/contacto"}>
                                     <Button sx={{ alignSelf: "flex-start", backgroundColor: "green" }} className="btn-aplicacion" variant="contained">Contactenos</Button>
                                 </Link>
                             </div>

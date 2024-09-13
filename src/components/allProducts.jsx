@@ -59,11 +59,11 @@ const AllProduct = () => {
                     {filteredData.map((item) => (
                         <div key={item.id}>
                             {isWideScreen ? (
-                                <Link to={`/sempervirens/products/item/${item.id}`}>
+                                <Link to={`/products/item/${item.id}`}>
                                     <Card img={`../../public/productos/${item.image[0]}`} text={item.description} price={item.price} title={item.name} />
                                 </Link >
                             ) : (
-                                <Link to={`/sempervirens/products/item/${item.id}`}>
+                                <Link to={`/products/item/${item.id}`}>
                                     <div className="allproducts-phone-div">
                                         <CardPhone data={item} />
                                     </div>

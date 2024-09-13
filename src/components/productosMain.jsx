@@ -36,22 +36,22 @@ const ProductosMain = () => {
                 </div>
                 <div className="row column-media">
                     <div className="col-md-6 col-lg-4 col-12 my-2">
-                        <Link to={`/sempervirens/products/item/1`} className="featureLinkCard">
+                        <Link to={`/products/item/1`} className="featureLinkCard">
                             <Card img={"../../public/productos/" + data[1].image[0]} title={data[1].name} text={data[1].description} price={data[1].price} />
                         </Link>
                     </div>
                     <div className=" col-md-6 col-lg-4 col-12 my-2">
-                        <Link to={`/sempervirens/products/item/2`} className="featureLinkCard">
+                        <Link to={`/products/item/2`} className="featureLinkCard">
                             <Card img={"../../public/productos/" + data[2].image[1]} title={data[2].name} text={data[2].description} price={data[2].price} />
                         </Link>
                     </div>
                     <div className="col-md-6 col-lg-4 col-12 my-2 ">
-                        <Link to={`/sempervirens/products/item/3`} className="featureLinkCard">
+                        <Link to={`/products/item/3`} className="featureLinkCard">
                             <Card img={"../../public/productos/" + data[0].image[2]} title={data[0].name} text={data[0].description} price={data[0].price} />
                         </Link>
                     </div>
                 </div>
-                <Link to={"/sempervirens/products"}>
+                <Link to={"/products"}>
                     <div className="my-4 col-12 btn-home">
                         <Button style={{ width: "100%" }} className="btn-aplicacion" size="large" variant="contained">Ver Todo</Button>
                     </div>

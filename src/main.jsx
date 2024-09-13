@@ -13,32 +13,37 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "/products/:category",
+      element: <AllProduct />,
+    },
+    {
+      path: "/products",
+      element: <AllProduct />,
+    },
+    {
+      path: "/products/item/:productId",
+      element: <Product />,
+    },
+    {
+      path: "/taller",
+      element: <Taller />,
+    },
+    {
+      path: "/contacto",
+      element: <Contact />,
+    },
+  ],
   {
-    path: "/sempervirens/",
-    element: <App />,
-  },
-  {
-    path: "/sempervirens/products/:category", 
-    element: <AllProduct />,
-  },
-  {
-    path: "/sempervirens/products", 
-    element: <AllProduct />,
-  },
-  {
-    path: "/sempervirens/products/item/:productId",
-    element: <Product />,
-  },
-  {
-    path: "/sempervirens/taller",
-    element: <Taller />
-  },
-  {
-    path: "/sempervirens/contacto",
-    element: <Contact />
+    basename: "/sempervirens",
   }
-]);
+);
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(

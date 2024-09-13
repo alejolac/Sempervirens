@@ -19,7 +19,7 @@ const Categories = () => {
                     </div>
                     <div className="categorysFeatured mt-5">
                         <div className="d-flex justify-content-center cat" style={{ gap: "60px" }}>
-                            <Link to={"/sempervirens/products/plantas"}>
+                            <Link to={"/products/plantas"}>
                                 <div className="categoryIndividual" style={{ width: "160px" }}>
                                     <div className="text-center">
                                         <img src={plant} alt="" />
@@ -27,7 +27,7 @@ const Categories = () => {
                                     <h4 style={{ textDecoration: "none", color: "black" }} className="text-center mt-2 titleCat">Plantas</h4>
                                 </div>
                             </Link>
-                            <Link to={"/sempervirens/products/kits"}>
+                            <Link to={"/products/kits"}>
                                 <div className="categoryIndividual" style={{ width: "160px" }}>
                                     <div className="text-center">
                                         <img src={kit} alt="" />
@@ -35,7 +35,7 @@ const Categories = () => {
                                     <h4 style={{ textDecoration: "none", color: "black" }} className="text-center mt-2 titleCat">Kits</h4>
                                 </div>
                             </Link>
-                            <Link to={"/sempervirens/products/cajoncito"}>
+                            <Link to={"/products/cajoncito"}>
                                 <div className="categoryIndividual" style={{ width: "160px" }}>
                                     <div className="text-center">
                                         <img src={cajon} alt="" />
@@ -43,7 +43,7 @@ const Categories = () => {
                                     <h4 style={{ textDecoration: "none", color: "black" }} className="text-center mt-2 titleCat">Cajoncitos</h4>
                                 </div>
                             </Link>
-                            <Link to={"/sempervirens/products/semillas"}>
+                            <Link to={"/products/semillas"}>
                                 <div className="categoryIndividual" style={{ width: "160px" }}>
                                     <div className="text-center">
                                         <img src={terrario} alt="" />

@@ -17,10 +17,10 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavLink to={"/sempervirens/"} className="nav-link">Inicio</NavLink>
-                        <NavLink to={"/sempervirens/products/"} className="nav-link">Productos</NavLink>
-                        <NavLink to={"/sempervirens/taller"} className="nav-link">Taller</NavLink>
-                        <NavLink to={"/sempervirens/contacto"} className="nav-link">Contacto</NavLink>
+                        <NavLink to={"/"} className="nav-link">Inicio</NavLink>
+                        <NavLink to={"/products/"} className="nav-link">Productos</NavLink>
+                        <NavLink to={"/taller"} className="nav-link">Taller</NavLink>
+                        <NavLink to={"/contacto"} className="nav-link">Contacto</NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

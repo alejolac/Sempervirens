@@ -195,12 +195,12 @@ const ProductDisplay = ({ product }) => {
                         </div>
                         <div className="productos-relacionados">
                             {product.relacionados.map((relacionado, index) => (
-                                <Link key={relacionado.id} to={`/sempervirens/products/item/${relacionado.id}`}>
+                                <Link key={relacionado.id} to={`/products/item/${relacionado.id}`}>
                                     <Test img={`../../public/${relacionado.image}`} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
                                 </Link>
                             ))}
                         </div>
-                        <Link to={"/sempervirens/products"}>
+                        <Link to={"/products"}>
                             <div className="phone-releated-button">
                                 <Button className="button-phone-shadow button-releated-btn" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Ver todos</Button>
                             </div>

@@ -16,10 +16,10 @@ const Footer = () => {
                 </div>
                 <div className="footer-nav">
                     <ul >
-                        <li><Link to="/sempervirens">Inicio</Link></li>
-                        <li><Link to="/sempervirens/products">Productos</Link></li>
-                        <li><Link to="/sempervirens/taller">Taller</Link></li>
-                        <li><Link to="/sempervirens/contacto">Contacto</Link></li>
+                        <li><Link to="/">Inicio</Link></li>
+                        <li><Link to="/products">Productos</Link></li>
+                        <li><Link to="/taller">Taller</Link></li>
+                        <li><Link to="/contacto">Contacto</Link></li>
                     </ul>
                 </div>
                 <div className="footer-social">

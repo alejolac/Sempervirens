@@ -7,17 +7,17 @@ const Blog = () => {
         <div className="latest-posts container back-green my-5">
             <Title txt="Ultimas Publicaciones" />
             <div className="container blogHome-head" style={{ margin: "0" }}>
-                <Link className="blogHome" to={`/sempervirens/blogs/blog/1`}>
+                <Link className="blogHome" to={`/blogs/blog/1`}>
                     <img src={imgLogo} alt="" />
                     <h2>Flores en primavera</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptate ex cupiditate,</p>
                 </Link >
-                <Link className="blogHome" to={`/sempervirens/blogs/blog/1`}>
+                <Link className="blogHome" to={`/blogs/blog/1`}>
                     <img src={imgLogo} alt="" />
                     <h2>Flores en primavera</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptate ex cupiditate,</p>
                 </Link >
-                <Link className="blogHome" to={`/sempervirens/blogs/blog/1`}>
+                <Link className="blogHome" to={`/blogs/blog/1`}>
                     <img src={imgLogo} alt="" />
                     <h2>Flores en primavera</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptate ex cupiditate,</p>
