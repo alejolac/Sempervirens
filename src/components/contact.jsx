@@ -8,13 +8,15 @@ import ShareIcon from '@mui/icons-material/Share';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
-
-/* REACT MUI */
-import TextField from '@mui/material/TextField';
+import { useState, useEffect } from "react"
 
 const Contact = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <NavBar />
