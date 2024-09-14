@@ -60,7 +60,7 @@ const AllProduct = () => {
                         <div key={item.id}>
                             {isWideScreen ? (
                                 <Link to={`/products/item/${item.id}`}>
-                                    <Card img={`../../public/productos/${item.image[0]}`} text={item.description} price={item.price} title={item.name} />
+                                    <Card img={`/productos/${item.image[0]}`} text={item.description} price={item.price} title={item.name} />
                                 </Link >
                             ) : (
                                 <Link to={`/products/item/${item.id}`}>

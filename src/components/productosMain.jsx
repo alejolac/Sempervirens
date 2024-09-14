@@ -14,7 +14,7 @@ const ProductosMain = () => {
                 <Title txt={"Productos Destacados"} />
                 <div className="row my-5 align-items-center ">
                     <div className="col-12 col-lg-5 text-center">
-                        <Link to={`/sempervirens/products/item/1`}>
+                        <Link to={`/products/item/1`}>
                             <img src={img} alt="Cajon para tres plantas" />
                         </Link>
                     </div>
@@ -27,7 +27,7 @@ const ProductosMain = () => {
                             justo para la cocina o ventana.
                             Cada división cuenta con una pequeña pizarra para indicar el nombre de la planta o dejar un lindo mensaje
                         </p>
-                        <Link to={`/sempervirens/products/item/1`}>
+                        <Link to={`/products/item/1`}>
                             <div className="my-4 col-12 btn-home">
                                 <Button style={{ width: "100%" }} className="btn-aplicacion" size="large" variant="contained">Mas informacion</Button>
                             </div>
@@ -37,17 +37,17 @@ const ProductosMain = () => {
                 <div className="row column-media">
                     <div className="col-md-6 col-lg-4 col-12 my-2">
                         <Link to={`/products/item/1`} className="featureLinkCard">
-                            <Card img={"../../public/productos/" + data[1].image[0]} title={data[1].name} text={data[1].description} price={data[1].price} />
+                            <Card img={"productos/" + data[1].image[0]} title={data[1].name} text={data[1].description} price={data[1].price} />
                         </Link>
                     </div>
                     <div className=" col-md-6 col-lg-4 col-12 my-2">
                         <Link to={`/products/item/2`} className="featureLinkCard">
-                            <Card img={"../../public/productos/" + data[2].image[1]} title={data[2].name} text={data[2].description} price={data[2].price} />
+                            <Card img={"productos/" + data[2].image[1]} title={data[2].name} text={data[2].description} price={data[2].price} />
                         </Link>
                     </div>
                     <div className="col-md-6 col-lg-4 col-12 my-2 ">
                         <Link to={`/products/item/3`} className="featureLinkCard">
-                            <Card img={"../../public/productos/" + data[0].image[2]} title={data[0].name} text={data[0].description} price={data[0].price} />
+                            <Card img={"productos/" + data[0].image[2]} title={data[0].name} text={data[0].description} price={data[0].price} />
                         </Link>
                     </div>
                 </div>

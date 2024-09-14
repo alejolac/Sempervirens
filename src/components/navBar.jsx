@@ -3,7 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import imgLogo from "../../public/imgLogo.png"
 import "./styles/navbar.css"
-import { Link } from "react-router-dom"
 import { NavLink } from 'react-router-dom';
 
 
@@ -11,7 +10,7 @@ const NavBar = () => {
     return (
         <Navbar expand="lg" className='navbar-head'>
             <Container className='navbar-container'>
-                <NavLink to={"/sempervirens/"}>
+                <NavLink to={"/"}>
                     <Navbar.Brand><img className='imgLogo' src={imgLogo} alt="" /></Navbar.Brand>
                 </NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
