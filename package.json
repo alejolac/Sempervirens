@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://alejolac.github.io/Sempervirens",
+  "homepage": "https://alejolac.github.io/Sempervirens/",
   "scripts": {
     "dev": "vite",
     "prebuild": "npm install -g vite",
