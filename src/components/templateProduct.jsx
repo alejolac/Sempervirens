@@ -121,8 +121,8 @@ const ProductDisplay = ({ product }) => {
                                     {product.image.map((img, index) => (
                                         <AspectRatio key={index} ratio="1" sx={{ minWidth: 300 }} >
                                             <img
-                                                srcSet={`productos/${img}?h=120&fit=crop&auto=format&dpr=2 2x`}
-                                                src={`productos/${img}?h=120&fit=crop&auto=format`}
+                                                srcSet={`${import.meta.env.BASE_URL}productos/${img}?h=120&fit=crop&auto=format&dpr=2 2x`}
+                                                src={`${import.meta.env.BASE_URL}productos/${img}?h=120&fit=crop&auto=format`}
                                                 alt={"imagen producto"}
                                             />
                                         </AspectRatio>
@@ -156,7 +156,7 @@ const ProductDisplay = ({ product }) => {
                                     {product.image.map((img, index) => {
                                         return (
                                             <div key={index} onClick={() => handleImage(img)} className={img == product1 ? 'img-lateral-content img-lateral-focus' : 'img-lateral-content'}>
-                                                <img src={`/productos/${img}`} alt={product.name} />
+                                                <img src={`${import.meta.env.BASE_URL}/productos/${img}`} alt={product.name} />
                                             </div>
                                         )
                                     })}
@@ -164,7 +164,7 @@ const ProductDisplay = ({ product }) => {
                                 <div className="col-8 img-big">
                                     <div className="img-big-content">
                                         <Atropos className="atropos-template-product" onClick={() => handleImageClick(product1)}>
-                                            <img src={`productos/${product1}`} alt="" />
+                                            <img src={`${import.meta.env.BASE_URL}productos/${product1}`} alt="" />
                                         </Atropos>
                                     </div>
                                 </div>
@@ -196,7 +196,7 @@ const ProductDisplay = ({ product }) => {
                         <div className="productos-relacionados">
                             {product.relacionados.map((relacionado, index) => (
                                 <Link key={relacionado.id} to={`/products/item/${relacionado.id}`}>
-                                    <Test img={`/${relacionado.image}`} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
+                                    <Test img={`${import.meta.env.BASE_URL}/${relacionado.image}`} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
                                 </Link>
                             ))}
                         </div>
@@ -213,7 +213,7 @@ const ProductDisplay = ({ product }) => {
             {modalOpen && (
                 <div className="modal-overlay" onClick={handleCloseModal}>
                     <div className="modalIMG">
-                        <img className="large-image" src={`productos/${imgModal}`} alt="" />
+                        <img className="large-image" src={`${import.meta.env.BASE_URL}productos/${imgModal}`} alt="" />
                     </div>
                     <span className="close-modal-x">&times;</span>
                 </div>
