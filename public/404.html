@@ -1,3 +1,19 @@
-<script type="text/javascript">
-    window.location.href = "/Sempervirens" + window.location.pathname + window.location.search;
-</script>
+<!-- public/404.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="refresh" content="0;url=/Sempervirens/">
+    <script type="text/javascript">
+        // Evita un bucle infinito de redirección.
+        if (window.location.pathname !== '/Sempervirens/') {
+            window.location.href = '/Sempervirens' + window.location.pathname + window.location.search;
+        }
+    </script>
+</head>
+
+<body>
+    <p>If you are not redirected, <a href="/Sempervirens/">click here</a>.</p>
+</body>
+
+</html>
