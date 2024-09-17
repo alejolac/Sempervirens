@@ -102,7 +102,7 @@ const ProductDisplay = ({ product }) => {
                     {screenWidth <= 980 ? (
                         <div className="back-green-phone-head">
                             <div className="text-phone phone-name"><h1>{product.name}</h1></div>
-                            <div className="text-phone phone-category"><p className="mb-0">{product.category.map((e, index) => index == product.category.length-1 ? e : `${e},  `)}</p></div>
+                            <div className="text-phone phone-category"><p className="mb-0">{product.category.map((e, index) => index == product.category.length - 1 ? e : `${e},  `)}</p></div>
                             <div className="back-green-phone">
                                 <Box className="product-image-phone"
                                     sx={{
@@ -156,7 +156,7 @@ const ProductDisplay = ({ product }) => {
                                     {product.image.map((img, index) => {
                                         return (
                                             <div key={index} onClick={() => handleImage(img)} className={img == product1 ? 'img-lateral-content img-lateral-focus' : 'img-lateral-content'}>
-                                                <img src={`${import.meta.env.BASE_URL}/productos/${img}`} alt={product.name} />
+                                                <img src={`${import.meta.env.BASE_URL}productos/${img}`} alt={product.name} />
                                             </div>
                                         )
                                     })}
@@ -171,7 +171,7 @@ const ProductDisplay = ({ product }) => {
                             </div>
                             <div className="col-4 template-product-info">
                                 <div className={`template-product-name`}><Typography variant="h4">{product.name}</Typography></div>
-                                <div className={`template-product-category`}><Typography variant="subtitle1">{product.category.map((e, index) => index == product.category.length-1 ? e : `${e},  `)}</Typography></div>
+                                <div className={`template-product-category`}><Typography variant="subtitle1">{product.category.map((e, index) => index == product.category.length - 1 ? e : `${e},  `)}</Typography></div>
                                 <div style={{ whiteSpace: "pre-line" }} className={`template-product-description`}><Typography variant="body1">{product.description}</Typography></div>
                                 <div className={`template-product-price`}><Typography variant="h5">$ {product.price}</Typography></div>
                                 <div className="phone-product-button">
@@ -196,7 +196,7 @@ const ProductDisplay = ({ product }) => {
                         <div className="productos-relacionados">
                             {product.relacionados.map((relacionado, index) => (
                                 <Link key={relacionado.id} to={`/products/item/${relacionado.id}`}>
-                                    <Test img={`${import.meta.env.BASE_URL}/${relacionado.image}`} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
+                                    <Test img={`${import.meta.env.BASE_URL}${relacionado.image}`} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
                                 </Link>
                             ))}
                         </div>

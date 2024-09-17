@@ -15,11 +15,11 @@ const Categories = () => {
                         <img src={img2} alt="" />
                     </div>
                     <div className="titleFeatured text-center">
-                        <h2>Categorias mas Populares</h2>
+                        <h2>Categorias <br /> mas Populares</h2>
                     </div>
                     <div className="categorysFeatured mt-5">
-                        <div className="d-flex justify-content-center cat" style={{ gap: "60px" }}>
-                            <Link to={"/products/plantas"}>
+                        <div className="d-flex justify-content-center cat">
+                            <Link className="cat-elem" to={"/products/plantas"}>
                                 <div className="categoryIndividual" style={{ width: "160px" }}>
                                     <div className="text-center">
                                         <img src={plant} alt="" />
@@ -27,7 +27,7 @@ const Categories = () => {
                                     <h4 style={{ textDecoration: "none", color: "black" }} className="text-center mt-2 titleCat">Plantas</h4>
                                 </div>
                             </Link>
-                            <Link to={"/products/kits"}>
+                            <Link className="cat-elem" to={"/products/kits"}>
                                 <div className="categoryIndividual" style={{ width: "160px" }}>
                                     <div className="text-center">
                                         <img src={kit} alt="" />
@@ -35,7 +35,7 @@ const Categories = () => {
                                     <h4 style={{ textDecoration: "none", color: "black" }} className="text-center mt-2 titleCat">Kits</h4>
                                 </div>
                             </Link>
-                            <Link to={"/products/cajoncito"}>
+                            <Link className="cat-elem" to={"/products/cajoncito"}>
                                 <div className="categoryIndividual" style={{ width: "160px" }}>
                                     <div className="text-center">
                                         <img src={cajon} alt="" />
@@ -43,7 +43,7 @@ const Categories = () => {
                                     <h4 style={{ textDecoration: "none", color: "black" }} className="text-center mt-2 titleCat">Cajoncitos</h4>
                                 </div>
                             </Link>
-                            <Link to={"/products/semillas"}>
+                            <Link className="cat-elem" to={"/products/semillas"}>
                                 <div className="categoryIndividual" style={{ width: "160px" }}>
                                     <div className="text-center">
                                         <img src={terrario} alt="" />

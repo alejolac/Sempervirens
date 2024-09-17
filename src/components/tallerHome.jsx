@@ -13,9 +13,9 @@ const Taller = () => {
                             fontSize: "36px",
                             fontWeight: "500",
                             color: "rgb(1 77 51)",
-                        }}>Un espacio para aprender</span>
+                        }}>Un Espacio <br /> Para Aprender</span>
                     </div>
-                    <div style={{ color: "rgb(125, 125, 125)", lineHeight: "2" }}>
+                    <div className="taller-home-p" style={{ color: "rgb(125, 125, 125)", lineHeight: "2" }}>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit necessitati sectetur adipisicing elit. Odit necessitatibus,dolor, sit amet consectetur adipisi t consectetur adipisicing elit. Obus,dolor, sit amet consectetur adipisi t consectetur adipisicing elit. Odit necessitatibus,dolor, sit amet consectetur adipcing elit. Odit necessitatibu harum et error quo eum. Cum fugit maxime, ducimus temporibus
                     </div>
                     <div className="taller-home-info">

@@ -63,7 +63,7 @@ const AllProduct = () => {
                                     <Card img={`${import.meta.env.BASE_URL}productos/${item.image[0]}`} text={item.description} price={item.price} title={item.name} />
                                 </Link >
                             ) : (
-                                <Link to={`${import.meta.env.BASE_URL}/products/item/${item.id}`}>
+                                <Link to={`/products/item/${item.id}`}>
                                     <div className="allproducts-phone-div">
                                         <CardPhone data={item} />
                                     </div>

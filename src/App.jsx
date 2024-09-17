@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/navBar.jsx';
@@ -16,6 +16,9 @@ function App() {
   const [count, setCount] = useState(21)
   const [data, setData] = useState(1)
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleProductData = value => {
     setData(value)

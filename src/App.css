@@ -191,6 +191,12 @@ img {
   margin-bottom: 40px;
 }
 
+.main-products-phone {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .productFeat img {
   width: 100%;
 }
@@ -312,9 +318,13 @@ img {
   text-decoration: none !important;
 }
 
+.cat {
+  gap: 60px;
+}
 @media (max-width: 815px) {
   .cat {
     flex-wrap: wrap !important;
+    gap: 20px;
   }
 
   .backgroundFeatured {
@@ -322,9 +332,9 @@ img {
     margin: 0 auto
   }
 
-  .categoryIndividual {
+  .cat-elem {
     flex: 0 0 auto;
-    width: 40% !important;
+    width: 46%;
   }
 
   .cat>a {
@@ -334,11 +344,6 @@ img {
 }
 
 @media (max-width: 450px) {
-  .categoryIndividual {
-    flex: 0 0 auto;
-    width: 50% !important;
-  }
-
   .featuredHR {
     width: 80%;
   }
@@ -863,6 +868,9 @@ footer {
     gap: 16px;
     align-items: center;
   }
+  .taller-home-info span {
+    font-size: 24px!important;;
+  }
 }
 
 .card-phone {
@@ -948,6 +956,12 @@ footer {
 .taller-home-title-sec {
   font-weight: 500;
   font-size: 20px;
+}
+
+@media (max-width: 968px) {
+  .taller-home-p {
+    font-size: 14px;
+  }
 }
 
 /* Contact Page */
