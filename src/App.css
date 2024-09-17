@@ -966,15 +966,36 @@ footer {
 
 /* Contact Page */
 
+.contact-container {
+  padding: 120px 0 40px;
+}
+
+@media (min-width: 900px) {
+  .contact-container {
+    padding: 180px 0 100px;
+  }
+}
+
 @media (max-width: 900px) {
   .contact-info-head {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .contact-form-data {
     flex-direction: column;
     gap: 20px!important;
+  }
+
+  .contact-info-subhead {
+    justify-content: flex-start!important;
+    display: flex;
+  }
+
+  .contact-form-title {
+    margin-bottom: 0!important;
+    text-align: center;
   }
 }
 

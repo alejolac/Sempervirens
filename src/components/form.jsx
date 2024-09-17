@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button } from '@mui/material';
+import { TextField, Button, Box, CircularProgress } from '@mui/material';
 import Snackbar from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
@@ -30,6 +30,9 @@ const MyForm = () => {
         vertical: 'bottom',
         horizontal: 'right',
     });
+
+    // Estado para progress
+    const [loading, setLoading] = React.useState(false);
 
     const { vertical, horizontal, open, text } = state;
 
@@ -116,6 +119,7 @@ const MyForm = () => {
     };
 
     async function sendEmail() {
+        setLoading(true);
         try {
             const response = await fetch('https://sempervirens.vercel.app/api/send-email', {
                 method: 'POST',
@@ -144,6 +148,8 @@ const MyForm = () => {
         } catch (error) {
             console.error('Error sending email:', error);
             handleClick({ vertical: 'bottom', horizontal: 'right', text: "Hubo un error al enviar los datos, intente mas tarde" })
+        } finally {
+        setLoading(false); // Desactivar loader
         }
     }
 
@@ -169,6 +175,7 @@ const MyForm = () => {
                         variant="standard"
                         color="success"
                         name="email"
+                        type='email'
                         value={formValues.email}
                         onChange={handleChange}
                         error={!!errors.email}
@@ -203,9 +210,30 @@ const MyForm = () => {
                         fullWidth
                     />
                 </div>
-                <Button type="submit" variant="contained" color="success">
-                    Enviar
-                </Button>
+                <Box sx={{m: 1, position: "relative"}}>
+                    <Button 
+                        type="submit"
+                        variant="contained"
+                        color="success"
+                        disabled={loading}
+                        fullWidth
+                    >
+                        Enviar
+                    </Button>
+                    {loading && (
+                        <CircularProgress
+                        size={24}
+                        sx={{
+                          color: "green",
+                          position: 'absolute',
+                          top: '50%',
+                          left: '50%',
+                          marginTop: '-12px',
+                          marginLeft: '-12px',
+                        }}
+                      />
+                    )}
+                </Box>
             </div>
             <Snackbar
                 anchorOrigin={{ vertical, horizontal }}

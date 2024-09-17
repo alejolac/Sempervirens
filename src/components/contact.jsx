@@ -12,6 +12,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import { useState, useEffect } from "react"
 
 const Contact = () => {
+    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 675);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -20,11 +21,11 @@ const Contact = () => {
     return (
         <>
             <NavBar />
-            <main className="container allproducts-container">
+            <main className="container contact-container">
                 <div className="back-green">
                     <div className="mb-4">
                         <Title txt="Contáctenos" />
-                        <p className="contact-subtitle">Nos encantaría saber de ti. Contáctanos para conocer más sobre nuestros <span>Productos</span> y <span>Talleres</span>, <br /> o para resolver cualquier duda que tengas</p>
+                        <p className="contact-subtitle">Nos encantaría saber de ti. Contáctanos para conocer más sobre nuestros <span>Productos</span> y <span>Talleres</span>, {isWideScreen ? <br /> : null} o para resolver cualquier duda que tengas</p>
                     </div>
                     <div className="row contact-info-head">
                         <div className="col-12 col-md-4 contact-info-subhead">
