@@ -111,7 +111,6 @@ const MyForm = () => {
         e.preventDefault();
         if (validateForm()) {
             sendEmail()
-            cleanValues()
             console.log('Formulario enviado:', formValues);
         } else {
             console.log('Errores en el formulario');
@@ -149,7 +148,8 @@ const MyForm = () => {
             console.error('Error sending email:', error);
             handleClick({ vertical: 'bottom', horizontal: 'right', text: "Hubo un error al enviar los datos, intente mas tarde" })
         } finally {
-        setLoading(false); // Desactivar loader
+            cleanValues()
+            setLoading(false); // Desactivar loader
         }
     }
 
@@ -210,8 +210,8 @@ const MyForm = () => {
                         fullWidth
                     />
                 </div>
-                <Box sx={{m: 1, position: "relative"}}>
-                    <Button 
+                <Box sx={{ m: 1, position: "relative" }}>
+                    <Button
                         type="submit"
                         variant="contained"
                         color="success"
@@ -222,16 +222,16 @@ const MyForm = () => {
                     </Button>
                     {loading && (
                         <CircularProgress
-                        size={24}
-                        sx={{
-                          color: "green",
-                          position: 'absolute',
-                          top: '50%',
-                          left: '50%',
-                          marginTop: '-12px',
-                          marginLeft: '-12px',
-                        }}
-                      />
+                            size={24}
+                            sx={{
+                                color: "green",
+                                position: 'absolute',
+                                top: '50%',
+                                left: '50%',
+                                marginTop: '-12px',
+                                marginLeft: '-12px',
+                            }}
+                        />
                     )}
                 </Box>
             </div>

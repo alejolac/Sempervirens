@@ -59,17 +59,17 @@ const ProductosMain = () => {
                     </div>
                 ) : (
                     <div className="main-products-phone">
-                        <Link to={`${import.meta.env.BASE_URL}/products/item/${data[0].id}`}>
+                        <Link to={`/products/item/${data[0].id}`}>
                             <div className="allproducts-phone-div">
                                 <CardPhone data={data[0]} />
                             </div>
                         </Link>
-                        <Link to={`${import.meta.env.BASE_URL}/products/item/${data[0].id}`}>
+                        <Link to={`/products/item/${data[0].id}`}>
                             <div className="allproducts-phone-div">
                                 <CardPhone data={data[0]} />
                             </div>
                         </Link>
-                        <Link to={`${import.meta.env.BASE_URL}/products/item/${data[0].id}`}>
+                        <Link to={`/products/item/${data[0].id}`}>
                             <div className="allproducts-phone-div">
                                 <CardPhone data={data[0]} />
                             </div>
