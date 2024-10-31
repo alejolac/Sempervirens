@@ -1092,7 +1092,7 @@ footer {
 }
 
 .taller-aside {
-  margin-top: 40px!important;
+  margin-top: 40px !important;
   gap: 20px;
   justify-content: space-around;
 }
@@ -1101,4 +1101,27 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.taller-aside-elem img {
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  border-radius: 20px;
+}
+
+.taller-aside-elem img:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.large-image-taller {
+  width: 45%;
+  height: 45%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.taller-modal {
+  display: flex;
+  justify-content: center;
 }
