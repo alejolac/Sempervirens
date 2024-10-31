@@ -571,6 +571,7 @@ a {
 
 .template-product-category {
   padding-top: 0 !important;
+  color: #7d7d7d;
 }
 
 .template-product-price h5 {
@@ -1115,8 +1116,8 @@ footer {
 }
 
 .large-image-taller {
-  width: 45%;
-  height: 45%;
+  width: 42%;
+  height: 42%;
   background-color: white;
   border-radius: 20px;
 }
@@ -1124,4 +1125,16 @@ footer {
 .taller-modal {
   display: flex;
   justify-content: center;
+}
+
+/* BLOG SECTION */
+
+.blog-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog-section-title div {
+  color: #7d7d7d;
 }

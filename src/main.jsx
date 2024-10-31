@@ -5,6 +5,7 @@ import Product from './components/templateProduct.jsx';
 import AllProduct from './components/allProducts.jsx';
 import Taller from "./components/taller.jsx"
 import Contact from "./components/contact.jsx";
+import Blog from "./components/templateBlog.jsx"
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter(
       path: "/contacto",
       element: <Contact />,
     },
+    {
+      path: "/blog/:blogId",
+      element: <Blog />,
+    }
   ],
   {
     basename: "/",

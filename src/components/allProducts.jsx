@@ -46,31 +46,33 @@ const AllProduct = () => {
         <>
             <NavBar />
             <main className="container allproducts-container">
-                <Title txt="Productos Sempervirens" />
-                <div className="productos-filtros">
-                    <ButtonGroup color="success" variant="text" aria-label="Basic button group">
-                        <Button color="success" onClick={() => setCategoryVal('all')}>Todo</Button>
-                        {[...allCategories].map((category, index) => (
-                            <Button key={index} variant={categoryVal == category ? "outlined" : "text"} color="success" onClick={() => setCategoryVal(category)}>{category}</Button>
+                <div className="back-green">
+                    <Title txt="Productos Sempervirens" />
+                    <div className="productos-filtros">
+                        <ButtonGroup color="success" variant="text" aria-label="Basic button group">
+                            <Button color="success" onClick={() => setCategoryVal('all')}>Todo</Button>
+                            {[...allCategories].map((category, index) => (
+                                <Button key={index} variant={categoryVal == category ? "outlined" : "text"} color="success" onClick={() => setCategoryVal(category)}>{category}</Button>
+                            ))}
+                        </ButtonGroup>
+                    </div>
+                    <div ref={animationParent} className="allproducts-head">
+                        {filteredData.map((item) => (
+                            <div key={item.id}>
+                                {isWideScreen ? (
+                                    <Link to={`/products/item/${item.id}`}>
+                                        <Card img={`${import.meta.env.BASE_URL}productos/${item.image[0]}`} text={item.description} price={item.price} title={item.name} />
+                                    </Link >
+                                ) : (
+                                    <Link to={`/products/item/${item.id}`}>
+                                        <div className="allproducts-phone-div">
+                                            <CardPhone data={item} />
+                                        </div>
+                                    </Link>
+                                )}
+                            </div>
                         ))}
-                    </ButtonGroup>
-                </div>
-                <div ref={animationParent} className="allproducts-head">
-                    {filteredData.map((item) => (
-                        <div key={item.id}>
-                            {isWideScreen ? (
-                                <Link to={`/products/item/${item.id}`}>
-                                    <Card img={`${import.meta.env.BASE_URL}productos/${item.image[0]}`} text={item.description} price={item.price} title={item.name} />
-                                </Link >
-                            ) : (
-                                <Link to={`/products/item/${item.id}`}>
-                                    <div className="allproducts-phone-div">
-                                        <CardPhone data={item} />
-                                    </div>
-                                </Link>
-                            )}
-                        </div>
-                    ))}
+                    </div>
                 </div>
             </main>
             <Footer />
