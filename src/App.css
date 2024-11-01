@@ -1138,3 +1138,11 @@ footer {
 .blog-section-title div {
   color: #7d7d7d;
 }
+
+.blog-section-content img{
+  max-width: 80%;
+}
+
+.blog-section-content p {
+  font-size: 18px;
+}

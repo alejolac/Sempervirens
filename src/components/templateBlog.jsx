@@ -17,12 +17,12 @@ const templateBlog = () => {
         <>
             <NavBar />
             <main className="container contact-container">
-               <div className="back-green">
+               <div className="back-green back-green-blog">
                     <div className="blog-section-title">
-                        <h2>{dataBlog.title}</h2>
+                        <h1>{dataBlog.title}</h1>
                         <div>{dataBlog.date}</div>
                     </div>
-                    <div dangerouslySetInnerHTML={{ __html: dataBlog.content }} >
+                    <div className="blog-section-content" dangerouslySetInnerHTML={{ __html: dataBlog.content }} >
                     </div>
                </div>
             </main>

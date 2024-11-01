@@ -1,14 +1,12 @@
 const data = [
     {
         id: 1,
-        title: "Introduction",
+        title: "Lapachos",
         content: `
-            <p>This is the content of the first blog post. Welcome to my blog!</p>
-            <img src="https://via.placeholder.com/600x300" alt="Placeholder Image" />
-            <p>Here’s an image included in the blog content.</p>
-            <p>Now, let’s continue with more content.</p>
-            <h3>Another Section</h3>
-            <p>This section talks about additional details and includes more information.</p>
+            <p>🌳Si aprecias a la distancia manchas rosadas en el paisaje son ellos, sin duda, los LAPACHOS (Handroanthus impetiginosus)!</p>
+            <img src="/blogImage1.jpg" alt="Placeholder Image" />
+            <p>árbol nativo que por estos días nos cautiva con su abundante floración. En Bvar Artigas desde el nuevo centro hacia el Prado los podrás apreciar, ya que hay toda una alineación de ellos.
+Esperemos comenzar a verlo por muchos lugares más!!🌸🌿</p>
         `,
         date: "31-10-2024",
     }
