@@ -1,6 +1,6 @@
-import imgLogo from "../../public/blogHome_1.jpg"
 import Title from "./titleSection.jsx"
 import EastIcon from '@mui/icons-material/East';
+import { Link } from "react-router-dom"
 
 const Taller = () => {
     return (
@@ -16,28 +16,31 @@ const Taller = () => {
                         }}>Un Espacio <br /> Para Aprender</span>
                     </div>
                     <div className="taller-home-p" style={{ color: "rgb(125, 125, 125)", lineHeight: "2" }}>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit necessitati sectetur adipisicing elit. Odit necessitatibus,dolor, sit amet consectetur adipisi t consectetur adipisicing elit. Obus,dolor, sit amet consectetur adipisi t consectetur adipisicing elit. Odit necessitatibus,dolor, sit amet consectetur adipcing elit. Odit necessitatibu harum et error quo eum. Cum fugit maxime, ducimus temporibus
+                        Si te gustan las plantas esta es una excelente oportunidad para conocer más sobre ellas, sus cuidados, donde ubicarlas correctamente, en qué momento podarlas, reproducirlas y mucho más. Conocerás sobre árboles, arbustos, trepadoras,césped y una gran variedad de temas.
+                        No dudes en consultarnos por mayor información.
                     </div>
                     <div className="taller-home-info">
-                        <span>
-                            Mas Información
-                        </span>
+                        <Link style={{color: "#014D33"}} to={`/taller`}>
+                            <span>
+                                Mas Información
+                            </span>
+                        </Link>
                         <div style={{ transition: "0.4s ease-in-out" }}>
-                            <EastIcon color="success" />
+                            <EastIcon color="#014D33" />
                         </div>
                     </div>
                 </div>
-                <div style={{gap: "0px"}} className="taller-home-item col-lg-5">
+                <div style={{ gap: "0px" }} className="taller-home-item col-lg-5">
                     <div className="taller-home-elem">
                         <div className="taller-home-index">
                             01
                         </div>
                         <div className="taller-home-sec-head">
                             <div className="taller-home-title-sec">
-                                Flores
+                                Huerta
                             </div>
                             <div>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus aspernatur velit
+                                Aprende a cultivar en casa de forma simple y práctica. Descubre cómo empezar una huerta, desde el suelo hasta la cosecha.
                             </div>
                         </div>
                     </div>
@@ -47,10 +50,10 @@ const Taller = () => {
                         </div>
                         <div className="taller-home-sec-head">
                             <div className="taller-home-title-sec">
-                                Árboles
+                                Plantas Aromáticas
                             </div>
                             <div>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus aspernatur velit
+                                Conoce las mejores técnicas para cultivar y cuidar plantas aromáticas en tu hogar, y aprovecha sus beneficios en la cocina y el bienestar.
                             </div>
                         </div>
                     </div>
@@ -60,7 +63,7 @@ const Taller = () => {
                         </div>
                         <div className="taller-home-sec-head">
                             <div className="taller-home-title-sec">
-                                Semillas
+                                Flores
                             </div>
                             <div>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus aspernatur velit

@@ -21,7 +21,7 @@ const templateBlog = () => {
             <NavBar />
             <main className="container contact-container">
                 {dataBlog != undefined && (
-                     <div className="back-green back-green-blog">
+                    <div className="back-green back-green-blog">
                         <div className="blog-section-title">
                             <h1>{dataBlog.title}</h1>
                             <div>{dataBlog.date}</div>
