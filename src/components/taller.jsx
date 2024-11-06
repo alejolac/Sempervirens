@@ -42,10 +42,10 @@ const Taller = () => {
                         </div>
                         <div className="taller-aside-elem col-md-5 col-12">
                             <div className="mb-3">
-                                <h3>Huerta 🌱</h3>
+                                <h3>Huerta 🪴</h3>
                             </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quis nulla vero necessitatibus at odio</p>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quis nulla vero necessitatibus at odio</p>
+                            <p>En nuestro taller de huerta aprenderás sobre distintos cultivos, sus épocas de siembra y cuidados esenciales. Exploraremos la importancia de nutrir el suelo, los beneficios del compostaje y técnicas para un manejo ecológico de la huerta. </p>
+                            <p>¡Anímate a descubrir todo lo que una huerta puede ofrecer!</p>
                             <img onClick={() => handleImageClick(Programa1)} src={Programa1} alt="Programa Taller de Jardineria" />
                         </div>
                     </div>
