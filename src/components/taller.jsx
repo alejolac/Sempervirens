@@ -32,15 +32,15 @@ const Taller = () => {
                         </div>
                     </div>
                     <div className="taller-aside row">
-                        <div className="taller-aside-elem col-5">
+                        <div className="taller-aside-elem col-md-5 col-12">
                             <div className="mb-3">
                                 <h3>Jardineria 🌱</h3>
                             </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quis nulla vero necessitatibus at odio</p>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quis nulla vero necessitatibus at odio</p>
+                            <p>Si te gustan las plantas esta es una excelente oportunidad para conocer más sobre ellas, sus cuidados, donde ubicarlas correctamente, en qué momento podarlas, reproducirlas y mucho más.</p>
+                            <p>Conocerás sobre árboles, arbustos, trepadoras,césped y una gran variedad de temas. No dudes en consultarnos por mayor información.</p>
                             <img onClick={() => handleImageClick(Programa1)} src={Programa1} alt="Programa Taller de Jardineria" />
                         </div>
-                        <div className="taller-aside-elem col-5">
+                        <div className="taller-aside-elem col-md-5 col-12">
                             <div className="mb-3">
                                 <h3>Huerta 🌱</h3>
                             </div>
