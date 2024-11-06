@@ -15,7 +15,6 @@
     background-color: #fff;
     box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
     transition: all .5s ease-in-out;
-    padding-bottom: 60px;
     min-height: 300px;
     /* Ajusta según el tamaño que necesites */
 }
