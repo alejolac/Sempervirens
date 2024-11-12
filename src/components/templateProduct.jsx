@@ -18,6 +18,7 @@ const ProductDisplay = ({ product }) => {
     if (product == undefined) {
         product = useParams().productId
         product = Plants.find(producto => producto.id == product)
+        console.log(useParams().productId);
     }
     const [product1, setProduct1] = useState(product.image[0])
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -64,6 +65,11 @@ const ProductDisplay = ({ product }) => {
     const handleCloseModal = () => {
         setModalOpen(false);
     };
+
+    function getRelatedProducts(product) {
+        console.log(product);
+        return product.relacionados.map(id => Plants.find(p => p.id === id));
+    }
 
     // Code Description
 
@@ -194,9 +200,14 @@ const ProductDisplay = ({ product }) => {
                             <h3>Productos Relacionados</h3>
                         </div>
                         <div className="productos-relacionados">
-                            {product.relacionados.map((relacionado, index) => (
+                            {getRelatedProducts(product).map((relacionado, index) => (
                                 <Link key={relacionado.id} to={`/products/item/${relacionado.id}`}>
-                                    <Test img={`${import.meta.env.BASE_URL}${relacionado.image}`} title={relacionado.name} text={relacionado.description} price={relacionado.price} />
+                                    <Test
+                                        img={`${import.meta.env.BASE_URL}productos/${relacionado.image[0]}`}
+                                        title={relacionado.name}
+                                        text={relacionado.description}
+                                        price={relacionado.price}
+                                    />
                                 </Link>
                             ))}
                         </div>

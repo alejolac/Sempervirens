@@ -46,7 +46,6 @@ const Taller = () => {
                             </div>
                             <p>En nuestro taller de huerta aprenderás sobre distintos cultivos, sus épocas de siembra y cuidados esenciales. Exploraremos la importancia de nutrir el suelo, los beneficios del compostaje y técnicas para un manejo ecológico de la huerta. </p>
                             <p>¡Anímate a descubrir todo lo que una huerta puede ofrecer!</p>
-                            <img onClick={() => handleImageClick(Programa1)} src={Programa1} alt="Programa Taller de Jardineria" />
                         </div>
                     </div>
                 </div>

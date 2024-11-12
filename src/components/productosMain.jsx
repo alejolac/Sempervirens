@@ -76,8 +76,8 @@ const ProductosMain = () => {
                         </Link>
                     </div>
                 )}
-                <Link to={"/products"}>
-                    <div className="my-4 col-12 btn-home">
+                <Link style={{display: "contents"}} to={"/products"}>
+                    <div  className="my-4 col-12 btn-home">
                         <Button style={{ width: "100%" }} className="btn-aplicacion" size="large" variant="contained">Ver Todo</Button>
                     </div>
                 </Link>

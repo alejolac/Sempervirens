@@ -61,7 +61,7 @@ const AllProduct = () => {
                             <div key={item.id}>
                                 {isWideScreen ? (
                                     <Link to={`/products/item/${item.id}`}>
-                                        <Card img={`${import.meta.env.BASE_URL}productos/${item.image[0]}`} text={item.description} price={item.price} title={item.name} />
+                                        <Card img={`${import.meta.env.BASE_URL}productos/${item.id}-1.webp`} text={item.description} price={item.price} title={item.name} />
                                     </Link >
                                 ) : (
                                     <Link to={`/products/item/${item.id}`}>
