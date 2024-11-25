@@ -18,7 +18,6 @@ const ProductDisplay = ({ product }) => {
     if (product == undefined) {
         product = useParams().productId
         product = Plants.find(producto => producto.id == product)
-        console.log(useParams().productId);
     }
     const [product1, setProduct1] = useState(product.image[0])
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -67,7 +66,6 @@ const ProductDisplay = ({ product }) => {
     };
 
     function getRelatedProducts(product) {
-        console.log(product);
         return product.relacionados.map(id => Plants.find(p => p.id === id));
     }
 
