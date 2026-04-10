@@ -18,27 +18,34 @@ export default function MediaControlCard({data}) {
     <Card className="card-phone" sx={{ display: "flex", width: "100%" }}>
       <CardMedia
         component="img"
-        sx={{ width: 151 }}
+        sx={{ width: 115, height: 115, flexShrink: 0, objectFit: 'cover' }}
         image={import.meta.env.BASE_URL+"productos/" + data.image[0]}
-        alt="Live from space album cover"
+        alt={data.name}
       />
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
-        <CardContent sx={{ flex: "1 0 auto" }}>
-          <Typography component="div" variant="h5">
+      <Box sx={{ display: "flex", flexDirection: "column", overflow: "hidden" }}>
+        <CardContent sx={{ flex: "1 0 auto", padding: "12px 14px !important" }}>
+          <Typography component="div" variant="body1" fontWeight={700} sx={{
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+            lineHeight: 1.3,
+            fontSize: '0.95rem',
+          }}>
             {data.name}
           </Typography>
           <Typography
-            variant="subtitle1"
+            variant="caption"
             color="text.secondary"
             component="div"
+            sx={{ mt: 0.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
           >
             {handleDescriptionValue(data.description)}
           </Typography>
           <Typography
-            variant="h6"
-            color="text.secondary"
+            variant="body2"
             component="div"
-            className="mt-2"
+            sx={{ mt: 1, fontWeight: 700, color: '#0f4229' }}
           >
             $ {data.price}
           </Typography>

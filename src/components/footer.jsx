@@ -1,26 +1,25 @@
-import Logo from "../../public/imgLogo.png"
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import ChatIcon from '@mui/icons-material/Chat';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Link } from "react-router-dom";
-import { useState } from "react"
-// Importa Link desde React Router si estás utilizando enlaces para la navegación
+
+const Logo = "/imgLogo.png"
 
 const Footer = () => {
-    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 675);
     return (
         <footer>
             <div className="footer-container">
                 <div className="footer-logo">
-                    <Link to="/sempervirens">
-                        <img src={Logo} alt="Logo" />
+                    <Link to="/">
+                        <img src={Logo} alt="Sempervirens logo" />
                     </Link>
                 </div>
                 <div className="footer-nav">
-                    <ul >
+                    <ul>
                         <li><Link to="/">Inicio</Link></li>
                         <li><Link to="/products">Productos</Link></li>
                         <li><Link to="/taller">Taller</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
                         <li><Link to="/contacto">Contacto</Link></li>
                     </ul>
                 </div>
@@ -33,20 +32,24 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="footer-contact">
-                    <div style={{display: "flex", alignItems: "center", justifyContent: "center", gap: "10px"}}>
-                        <p>
-                            Número de contacto: {isWideScreen ? null : <br />}+598 98 471 194
-                        </p>
-                        <a href="https://api.whatsapp.com/send?phone=598099911202" target="_blank" rel="noopener noreferrer" style={{color: "black"}}>
-                            <ChatIcon style={{fontSize: "20px"}}/>
+                    <div className="footer-contact-row">
+                        <p>Número de contacto: +598 98 471 194</p>
+                        <a href="https://api.whatsapp.com/send?phone=59898471194" target="_blank" rel="noopener noreferrer" className="footer-whatsapp">
+                            <WhatsAppIcon style={{ fontSize: "20px" }} />
                         </a>
                     </div>
-                    <p style={{textAlign: "center"}}>Correo electrónico: sempervirens@sempervirens.com</p>
+                    <p>
+                        <a href="mailto:sempervirens@sempervirens.com" className="footer-email">
+                            sempervirens@sempervirens.com
+                        </a>
+                    </p>
                 </div>
+            </div>
+            <div className="footer-copy">
+                © 2024 Sempervirens. Todos los derechos reservados.
             </div>
         </footer>
     )
 }
-
 
 export default Footer

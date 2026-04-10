@@ -353,7 +353,7 @@ const products = [
         id: 23,
         image: ["23-1.webp", "23-2.webp", "23-3.webp"],
         name: "Cajón De Huerta Para Niños",
-        price: "1.100",
+        price: "1100",
         category: [categorys.kits, categorys.cajoncito],
         description: `Cajoncito de Huerta para los pequeños de la casa para acercarles a las plantas y sus cuidados.
 

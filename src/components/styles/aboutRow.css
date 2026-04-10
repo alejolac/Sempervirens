@@ -1,5 +1,8 @@
+/* About Section */
+
 .aboutSection {
-    padding: 100px 0px;
+    padding: 90px 0;
+    background-color: #f7f8f5;
 }
 
 @media (max-width: 962px) {
@@ -8,48 +11,99 @@
     }
 }
 
+
+/* Header */
+
+.about-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f4229;
+    margin-bottom: 12px;
+}
+
+.about-subtitle {
+    font-size: 1.05rem;
+    color: #7d7d7d;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Cards */
+
 .about {
-    padding: 30px;
-    border-radius: 5px;
+    position: relative;
+    padding: 36px 28px 32px;
+    border-radius: 12px;
     margin-bottom: 25px;
     background-color: #fff;
-    box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
-    transition: all .5s ease-in-out;
-    min-height: 300px;
-    /* Ajusta según el tamaño que necesites */
+    border-top: 4px solid #86BF5E;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+    overflow: hidden;
 }
-
 
 .about:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
+
+/* Número decorativo */
+
+.about-num {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgba(134, 191, 94, 0.18);
+    line-height: 1;
+    user-select: none;
+}
+
+/* Ícono */
 
 .iconAbout {
-    width: 70px;
-    margin-bottom: 30px;
-    transition: all .5s ease-in-out;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 24px auto;
+    background-color: rgba(134, 191, 94, 0.14);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.45s ease;
 }
 
-@media(max-width:990px) {
-    .iconAbout {
-        margin: 0 !important;
-        margin-left: 20px !important;
-    }
+.about:hover .iconAbout {
+    background-color: rgba(134, 191, 94, 0.28);
 }
+
+.iconAbout img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Texto */
 
 .textAbout h4 {
-    font-size: 22px;
+    font-size: 1.1rem;
     color: #0f4229;
     margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
 }
 
 .textAbout p {
-    font-size: 18px;
+    font-size: 0.95rem;
     color: #7d7d7d;
-    line-height: 26px;
+    line-height: 1.75;
     text-align: center;
+    margin: 0;
 }

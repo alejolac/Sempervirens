@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm show:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npm audit:*)",
+      "Bash(node_modules/.bin/vite --version)",
+      "Bash(grep:*)",
+      "Bash(git log:*)"
+    ]
+  }
+}

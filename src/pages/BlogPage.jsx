@@ -1,12 +1,10 @@
-import Footer from "./footer.jsx"
-import NavBar from "./navBar.jsx"
-
+import Footer from "../components/footer.jsx"
+import NavBar from "../components/navBar.jsx"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-
 import Data from "../assets/blog.jsx"
 
-const templateBlog = () => {
+const BlogPage = () => {
     const idBlog = useParams().blogId
     const [dataBlog, setDataBlog] = useState()
 
@@ -26,7 +24,8 @@ const templateBlog = () => {
                             <h1>{dataBlog.title}</h1>
                             <div>{dataBlog.date}</div>
                         </div>
-                        <div className="blog-section-content" dangerouslySetInnerHTML={{ __html: dataBlog.content }} >
+                        <div className="blog-section-content">
+                            {dataBlog.content()}
                         </div>
                     </div>
                 )}
@@ -36,4 +35,4 @@ const templateBlog = () => {
     )
 }
 
-export default templateBlog;
+export default BlogPage;

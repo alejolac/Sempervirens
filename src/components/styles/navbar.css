@@ -1,7 +1,7 @@
 /* NavBar */
 
 .navbar-container {
-    gap: 20px!important;
+    gap: 20px !important;
 }
 
 .imgLogo {
@@ -10,9 +10,9 @@
 }
 
 .navbar {
-    padding: 26px !important;
-    background-color: var(--colorSecond)!important;
-    border-bottom: 1px solid rgb(165, 164, 165);
+    padding: 20px 26px !important;
+    background-color: var(--colorSecond) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 965px) {
@@ -22,9 +22,9 @@
 }
 
 .navbar-nav {
-    font-size: 24px;
+    font-size: 16px;
     color: var(--fontColor);
-    font-weight: 400 !important;
+    font-weight: 500 !important;
     justify-content: space-between !important;
     width: 100% !important;
 }
@@ -42,5 +42,33 @@
 }
 
 .nav-item a {
-    color: rgba(0, 0, 0, 0.65);
+    color: rgba(0, 0, 0, 0.6);
+    transition: color 0.25s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #86BF5E;
+    transition: width 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #0f4229;
+}
+
+.nav-item a:hover::after,
+.nav-item a.active::after {
+    width: 100%;
+}
+
+.nav-item a.active {
+    color: #0f4229;
+    font-weight: 600 !important;
 }

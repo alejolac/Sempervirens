@@ -1,44 +1,60 @@
 import "./styles/aboutRow.css"
-import img1 from "../../public/aboutRow1.png"
-import img2 from "../../public/aboutRow2.png"
-import img3 from "../../public/aboutRow3.png"
 
-const aboutRow = () => {
+const img1 = "/aboutRow1.png"
+const img2 = "/aboutRow2.png"
+const img3 = "/aboutRow3.png"
+
+const items = [
+    {
+        num: "01",
+        img: img1,
+        alt: "Equipo especializado",
+        title: "Equipo Especializado",
+        text: "Años de experiencia en jardinería y cultivo nos respaldan. Te guiamos con conocimiento real, no teoría.",
+    },
+    {
+        num: "02",
+        img: img2,
+        alt: "Precios accesibles",
+        title: "Precios Accesibles",
+        text: "Calidad que no compromete tu bolsillo. Porque aprender y cultivar debe estar al alcance de todos.",
+    },
+    {
+        num: "03",
+        img: img3,
+        alt: "Atención personalizada",
+        title: "Atención Personalizada",
+        text: "Cada persona es única. Nos adaptamos a tu espacio, ritmo y objetivos para que logres resultados reales.",
+    },
+]
+
+const AboutRow = () => {
     return (
         <div className="aboutSection">
             <div className="container">
+                <div className="about-header">
+                    <h2 className="about-title">¿Por qué elegirnos?</h2>
+                    <p className="about-subtitle">
+                        Sempervirens nace de la pasión por las plantas y el aprendizaje. Te acompañamos en cada paso.
+                    </p>
+                </div>
                 <div className="row align-items-stretch d-flex justify-content-around">
-                    <div className="about col-lg-3">
-                        <div className="iconAbout ms-4 ">
-                            <img src={img1} alt="" />
+                    {items.map(({ num, img, alt, title, text }) => (
+                        <div key={num} className="about col-lg-3">
+                            <span className="about-num">{num}</span>
+                            <div className="iconAbout">
+                                <img src={img} alt={alt} />
+                            </div>
+                            <div className="textAbout mt-3">
+                                <h4>{title}</h4>
+                                <p>{text}</p>
+                            </div>
                         </div>
-                        <div className="textAbout mt-3">
-                            <h4>Personal Capacitado</h4>
-                            <p>Con amplia experiencia en el cuidado y cultivo de plantas, ofrecemos conocimientos especializados para ayudarte a desarrollar tus habilidades en jardinería.</p>
-                        </div>
-                    </div>
-                    <div className="about col-lg-3">
-                        <div className="iconAbout ms-4 ">
-                            <img src={img2} alt="" />
-                        </div>
-                        <div className="textAbout mt-3">
-                            <h4>Precios Accesibles</h4>
-                            <p>Ofrecemos talleres y servicios de calidad a precios competitivos, para que puedas aprender sin preocuparte por el costo.</p>
-                        </div>
-                    </div>
-                    <div className="about col-lg-3">
-                        <div className="iconAbout ms-4">
-                            <img src={img3} alt="" />
-                        </div>
-                        <div className="textAbout mt-3">
-                            <h4>Atención Personalizada</h4>
-                            <p>Nos adaptamos a tus necesidades y nivel de conocimiento, asegurándonos de que cada experiencia sea enriquecedora y ajustada a tus objetivos.</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 
-export default aboutRow
+export default AboutRow

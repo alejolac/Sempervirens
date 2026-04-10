@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
 import "atropos/css";
 import Atropos from "atropos/react";
-import Test from "./testCard.jsx"
-import Footer from "./footer.jsx"
-import Nav from "./navBar.jsx"
-import { useParams } from "react-router-dom";
+import ProductCard from "../components/ProductCard.jsx"
+import Footer from "../components/footer.jsx"
+import Nav from "../components/navBar.jsx"
+import { useParams, Link } from "react-router-dom";
 import Plants from "../assets/plants.jsx"
-import { Link } from "react-router-dom"
+import useWindowSize from "../hooks/useWindowSize.js"
 
 import AspectRatio from '@mui/joy/AspectRatio';
 import Box from '@mui/joy/Box';
@@ -14,28 +14,20 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-const ProductDisplay = ({ product }) => {
-    if (product == undefined) {
-        product = useParams().productId
-        product = Plants.find(producto => producto.id == product)
-    }
+const ProductDisplay = ({ product: productProp }) => {
+    const params = useParams();
+    const product = productProp ?? Plants.find(p => p.id == params.productId);
+
     const [product1, setProduct1] = useState(product.image[0])
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const screenWidth = useWindowSize();
     const [imgModal, setImgModal] = useState()
     const [descriptionState, setDescriptionState] = useState(2)
     const [descriptionValue, setDescriptionValue] = useState(product.description)
 
     let backColor = screenWidth <= 980 ? "pt-120 flex-product phone-product" : "pt-60 flex-product"
 
-    window.scrollTo(0, 0);
-
     useEffect(() => {
-        const handleResize = () => {
-            setScreenWidth(window.innerWidth);
-        };
-        window.addEventListener('resize', handleResize);
-
-        // Description
+        window.scrollTo(0, 0);
         function description(val) {
             let newVal = val.split(" ");
             if (newVal.length > 20) {
@@ -45,10 +37,6 @@ const ProductDisplay = ({ product }) => {
             else setDescriptionState(2)
         }
         description(product.description)
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
     }, []);
 
     const handleImage = (img) => {
@@ -65,11 +53,9 @@ const ProductDisplay = ({ product }) => {
         setModalOpen(false);
     };
 
-    function getRelatedProducts(product) {
-        return product.relacionados.map(id => Plants.find(p => p.id === id));
+    function getRelatedProducts(prod) {
+        return prod.relacionados.map(id => Plants.find(p => p.id === id));
     }
-
-    // Code Description
 
     function handleDescriptionValue(val) {
         let newVal = val.split(" ");
@@ -97,8 +83,8 @@ const ProductDisplay = ({ product }) => {
         if (descriptionState == 1) return <span onClick={handleDescription} className="span-ver">Ver mas</span>
         else if (descriptionState == 0) return <span onClick={handleDescription} className="span-ver">Ver menos</span>
         else return
-
     }
+
     return (
         <>  <Nav />
             {product1 != undefined &&
@@ -138,7 +124,7 @@ const ProductDisplay = ({ product }) => {
                                 <p className="mb-0">{descriptionValue}{destcriptionSeeMore()}</p>
                             </div>
                             <div className="phone-product-button">
-                                <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=598099911202">
+                                <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=59898471194">
                                     <Button className="button-phone-shadow" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Contactanos</Button>
                                 </a>
                                 <p className="product-"> - Las compras se realizan por mercado libre - </p>
@@ -179,7 +165,7 @@ const ProductDisplay = ({ product }) => {
                                 <div style={{ whiteSpace: "pre-line" }} className={`template-product-description`}><Typography variant="body1">{product.description}</Typography></div>
                                 <div className={`template-product-price`}><Typography variant="h5">$ {product.price}</Typography></div>
                                 <div className="phone-product-button">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=598099911202">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=59898471194">
                                         <Button className="button-phone-shadow" style={{ backgroundColor: "#6b9255", width: "100%" }} size="large" variant="contained">Contactanos</Button>
                                     </a>
                                     <p className="product-"> - Chat por Whatsapp para coordinar - </p>
@@ -198,9 +184,9 @@ const ProductDisplay = ({ product }) => {
                             <h3>Productos Relacionados</h3>
                         </div>
                         <div className="productos-relacionados">
-                            {getRelatedProducts(product).map((relacionado, index) => (
+                            {getRelatedProducts(product).map((relacionado) => (
                                 <Link key={relacionado.id} to={`/products/item/${relacionado.id}`}>
-                                    <Test
+                                    <ProductCard
                                         img={`${import.meta.env.BASE_URL}productos/${relacionado.image[0]}`}
                                         title={relacionado.name}
                                         text={relacionado.description}

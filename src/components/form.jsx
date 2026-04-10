@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { TextField, Button, Box, CircularProgress } from '@mui/material';
+import { TextField, Button, Box, CircularProgress, Alert } from '@mui/material';
 import Snackbar from '@mui/material/Snackbar';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
 
-// URL POSTA
-/* https://sempervirens.vercel.app */
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 
 const MyForm = () => {
     // Estado para los valores del formulario
@@ -24,37 +21,10 @@ const MyForm = () => {
         descripcion: '',
     });
 
-    const [state, setState] = useState({
-        open: false,
-        text: "",
-        vertical: 'bottom',
-        horizontal: 'right',
-    });
-
-    // Estado para progress
+    const [snackbar, setSnackbar] = useState({ open: false, text: '', severity: 'success' });
     const [loading, setLoading] = React.useState(false);
 
-    const { vertical, horizontal, open, text } = state;
-
-    const handleClick = (newState) => {
-        console.log(newState);
-        setState({ ...newState, open: true });
-    };
-
-    const handleClose = () => {
-        setState({ ...state, open: false });
-    };
-
-    const action = (
-        <IconButton
-            size="small"
-            aria-label="close"
-            color="inherit"
-            onClick={handleClose}
-        >
-            <CloseIcon fontSize="small" />
-        </IconButton>
-    );
+    const handleClose = () => setSnackbar(s => ({ ...s, open: false }));
 
     const cleanValues = () => {
         setFormValues({
@@ -106,50 +76,38 @@ const MyForm = () => {
         return isValid;
     };
 
-    // Maneja el envío del formulario
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (validateForm()) {
-            sendEmail()
-            console.log('Formulario enviado:', formValues);
-        } else {
-            console.log('Errores en el formulario');
-        }
+        if (validateForm()) sendEmail();
     };
 
     async function sendEmail() {
         setLoading(true);
         try {
-            const response = await fetch('https://sempervirens.vercel.app/api/send-email', {
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    to: 'alejobuc@gmail.com',
-                    from: 'sender@example.com',
-                    subject: formValues.asunto,
-                    text: `Nombre: ${formValues.name}, Correo de contacto: ${formValues.email} y Descripcion: ${formValues.descripcion}`,
+                    access_key: WEB3FORMS_KEY,
+                    subject: `[Sempervirens] ${formValues.asunto}`,
+                    name: formValues.name,
+                    email: formValues.email,
+                    message: formValues.descripcion,
                 }),
             });
-            if (!response.ok) {
-                throw new Error(`Error: ${response.statusText}`);
-            }
-
-            const text = await response.text(); // Lee el contenido como texto
-            if (text) {
-                const data = JSON.parse(text); // Intenta convertir a JSON
-                console.log('Email sent successfully:', data);
-                handleClick({ vertical: 'bottom', horizontal: 'right', text: "Datos Enviados Correctamente" })
+            const data = await response.json();
+            if (data.success) {
+                setSnackbar({ open: true, text: '¡Mensaje enviado correctamente!', severity: 'success' });
             } else {
-                console.log('No response body, email sent successfully');
+                throw new Error(data.message);
             }
-        } catch (error) {
-            console.error('Error sending email:', error);
-            handleClick({ vertical: 'bottom', horizontal: 'right', text: "Hubo un error al enviar los datos, intente mas tarde" })
+        } catch {
+            setSnackbar({ open: true, text: 'Hubo un error al enviar el mensaje, intente más tarde.', severity: 'error' });
         } finally {
-            cleanValues()
-            setLoading(false); // Desactivar loader
+            cleanValues();
+            setLoading(false);
         }
     }
 
@@ -236,15 +194,15 @@ const MyForm = () => {
                 </Box>
             </div>
             <Snackbar
-                anchorOrigin={{ vertical, horizontal }}
-                open={open}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                open={snackbar.open}
                 onClose={handleClose}
-                message={text}
-                key={vertical + horizontal}
-                autoHideDuration={3200}
-                transitionComponent="SlideTransition"
-                action={action}
-            />
+                autoHideDuration={4000}
+            >
+                <Alert onClose={handleClose} severity={snackbar.severity} variant="filled">
+                    {snackbar.text}
+                </Alert>
+            </Snackbar>
         </form>
     );
 };

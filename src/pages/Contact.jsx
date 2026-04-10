@@ -1,19 +1,16 @@
-import Footer from "./footer.jsx"
-import NavBar from "./navBar.jsx"
-import Title from "./titleSection.jsx"
-import Form from "./form.jsx"
+import Footer from "../components/footer.jsx"
+import NavBar from "../components/navBar.jsx"
+import Title from "../components/titleSection.jsx"
+import Form from "../components/form.jsx"
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ShareIcon from '@mui/icons-material/Share';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
-
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 
 const Contact = () => {
-    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 675);
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -25,7 +22,9 @@ const Contact = () => {
                 <div className="back-green">
                     <div className="mb-4">
                         <Title txt="Contáctenos" />
-                        <p className="contact-subtitle">Nos encantaría saber de ti. Contáctanos para conocer más sobre nuestros <span>Productos</span> y <span>Talleres</span>, {isWideScreen ? <br /> : null} o para resolver cualquier duda que tengas</p>
+                        <p className="contact-subtitle">
+                            Nos encantaría saber de ti. Contáctanos para conocer más sobre nuestros <span>Productos</span> y <span>Talleres</span>, o para resolver cualquier duda que tengas.
+                        </p>
                     </div>
                     <div className="row contact-info-head">
                         <div className="col-12 col-md-4 contact-info-subhead">
@@ -36,7 +35,7 @@ const Contact = () => {
                                 <div className="contact-info-data-title">
                                     <p>Numero de Telefono</p>
                                 </div>
-                                <a href="https://api.whatsapp.com/send?phone=598099911202" target="_blank" rel="noopener noreferrer" style={{ color: "black" }}>
+                                <a href="https://api.whatsapp.com/send?phone=59898471194" target="_blank" rel="noopener noreferrer" style={{ color: "black" }}>
                                     <div className="contact-info-data-wp contact-info-data-social">
                                         <p> 098 471 194</p> <WhatsAppIcon />
                                     </div>
@@ -52,12 +51,12 @@ const Contact = () => {
                                     <p>Redes Sociales</p>
                                 </div>
                                 <div>
-                                    <a href="https://api.whatsapp.com/send?phone=598099911202" target="_blank" rel="noopener noreferrer" style={{ color: "black" }}>
+                                    <a href="https://www.facebook.com/sempervirensuy" target="_blank" rel="noopener noreferrer" style={{ color: "black" }}>
                                         <div className="contact-info-data-fb contact-info-data-social">
                                             <p> Facebook</p> <FacebookIcon />
                                         </div>
                                     </a>
-                                    <a href="https://api.whatsapp.com/send?phone=598099911202" target="_blank" rel="noopener noreferrer" style={{ color: "black" }}>
+                                    <a href="https://www.instagram.com/sempervirensuy/" target="_blank" rel="noopener noreferrer" style={{ color: "black" }}>
                                         <div className="contact-info-data-ig contact-info-data-social">
                                             <p> Instagram</p> <InstagramIcon />
                                         </div>
@@ -73,7 +72,7 @@ const Contact = () => {
                                 <div className="contact-info-data-title">
                                     <p>Correo Electronico</p>
                                 </div>
-                                <a href="/" target="_blank" rel="noopener noreferrer" style={{ color: "black" }}>
+                                <a href="mailto:sempervirens@sempervirens.com" style={{ color: "black" }}>
                                     <div className="contact-info-data-social">
                                         <p> sempervirens@sempervirens.com</p>
                                     </div>

@@ -1,79 +1,65 @@
-import Title from "./titleSection.jsx"
 import EastIcon from '@mui/icons-material/East';
 import { Link } from "react-router-dom"
 
-const Taller = () => {
+const talleres = [
+    {
+        num: "01",
+        icon: "🌱",
+        title: "Huerta",
+        desc: "Cultivá en casa de forma simple. Desde la preparación del suelo hasta tu primera cosecha.",
+    },
+    {
+        num: "02",
+        icon: "🌿",
+        title: "Plantas Aromáticas",
+        desc: "Técnicas para cultivar aromáticas en el hogar y sacarles el máximo provecho en cocina y bienestar.",
+    },
+    {
+        num: "03",
+        icon: "🌸",
+        title: "Flores",
+        desc: "Elegí, plantá y mantené flores de temporada para embellecer cualquier rincón de tu espacio.",
+    },
+]
+
+const TallerHome = () => {
     return (
-        <div className="container back-green my-5">
-            <Title txt="Nuestro Taller" />
-            <div className="row taller-home-head">
-                <div className="taller-home-item col-lg-5">
-                    <div className="mt-2">
-                        <span style={{
-                            fontSize: "36px",
-                            fontWeight: "500",
-                            color: "rgb(1 77 51)",
-                        }}>Un Espacio <br /> Para Aprender</span>
-                    </div>
-                    <div className="taller-home-p" style={{ color: "rgb(125, 125, 125)", lineHeight: "2" }}>
-                        Si te gustan las plantas esta es una excelente oportunidad para conocer más sobre ellas, sus cuidados, donde ubicarlas correctamente, en qué momento podarlas, reproducirlas y mucho más. Conocerás sobre árboles, arbustos, trepadoras,césped y una gran variedad de temas.
-                        No dudes en consultarnos por mayor información.
-                    </div>
-                    <div className="taller-home-info">
-                        <Link style={{color: "#014D33"}} to={`/taller`}>
-                            <span>
-                                Mas Información
-                            </span>
+        <section className="th-section">
+            <div className="container">
+                <div className="row th-row">
+
+                    <div className="col-lg-5 th-left">
+                        <span className="th-label">Nuestro Taller</span>
+                        <h2 className="th-headline">
+                            Un Espacio<br />Para Aprender
+                        </h2>
+                        <p className="th-desc">
+                            Si te gustan las plantas, esta es tu oportunidad. Aprendé sobre cuidados, poda, reproducción, árboles, trepadoras y mucho más. Con instructores que realmente saben.
+                        </p>
+                        <Link to="/taller" className="th-btn">
+                            Ver Talleres <EastIcon fontSize="small" />
                         </Link>
-                        <div style={{ transition: "0.4s ease-in-out" }}>
-                            <EastIcon color="#014D33" />
-                        </div>
                     </div>
-                </div>
-                <div style={{ gap: "0px" }} className="taller-home-item col-lg-5">
-                    <div className="taller-home-elem">
-                        <div className="taller-home-index">
-                            01
-                        </div>
-                        <div className="taller-home-sec-head">
-                            <div className="taller-home-title-sec">
-                                Huerta
+
+                    <div className="col-lg-6 offset-lg-1 th-right">
+                        {talleres.map(({ num, icon, title, desc }) => (
+                            <div key={num} className="th-card">
+                                <div className="th-card-num">{num}</div>
+                                <div className="th-card-content">
+                                    <div className="th-card-header">
+                                        <span className="th-card-icon">{icon}</span>
+                                        <h3 className="th-card-title">{title}</h3>
+                                    </div>
+                                    <p className="th-card-desc">{desc}</p>
+                                </div>
                             </div>
-                            <div>
-                                Aprende a cultivar en casa de forma simple y práctica. Descubre cómo empezar una huerta, desde el suelo hasta la cosecha.
-                            </div>
-                        </div>
+                        ))}
                     </div>
-                    <div className="taller-home-elem">
-                        <div className="taller-home-index">
-                            02
-                        </div>
-                        <div className="taller-home-sec-head">
-                            <div className="taller-home-title-sec">
-                                Plantas Aromáticas
-                            </div>
-                            <div>
-                                Conoce las mejores técnicas para cultivar y cuidar plantas aromáticas en tu hogar, y aprovecha sus beneficios en la cocina y el bienestar.
-                            </div>
-                        </div>
-                    </div>
-                    <div className="taller-home-elem">
-                        <div className="taller-home-index">
-                            03
-                        </div>
-                        <div className="taller-home-sec-head">
-                            <div className="taller-home-title-sec">
-                                Flores
-                            </div>
-                            <div>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus aspernatur velit
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
-export default Taller
+export default TallerHome

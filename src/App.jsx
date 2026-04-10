@@ -1,60 +1,32 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/navBar.jsx';
-import HomeMain from './components/main.jsx';
+import HeroSection from './components/HeroSection.jsx';
 import AboutRow from './components/aboutRow.jsx';
 import ProductosMain from './components/productosMain.jsx';
 import BestCategories from './components/bestCategories.jsx';
 import ViewBlog from "./components/viewBlog.jsx";
-import Template from "./components/templateProduct.jsx";
 import Footer from "./components/footer.jsx";
 import Taller from "./components/tallerHome.jsx";
 
-import Products from "./assets/plants.jsx"
 function App() {
-  const [count, setCount] = useState(21)
-  const [data, setData] = useState(1)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const handleProductData = value => {
-    setData(value)
-  }
-
-  const testReturn = () => {
-    if (count == 1) {
-      const product = Products.find(producto => producto.id === data);
-      return (
+    return (
         <>
-          <Template product={product} handleProductData={handleProductData} />
+            <NavBar />
+            <HeroSection />
+            <AboutRow />
+            <ProductosMain />
+            <BestCategories />
+            <Taller />
+            <ViewBlog />
+            <Footer />
         </>
-      )
-    }
-    else {
-      return (
-        <>
-          <NavBar />
-          <HomeMain />
-          <AboutRow />
-          <ProductosMain />
-          <BestCategories />
-          <Taller />
-          <ViewBlog />
-          <Footer />
-        </>
-      )
-    }
-  }
-
-  return (
-    <>
-      <NavBar />
-      {testReturn()}
-    </>
-  )
+    )
 }
 
 export default App
